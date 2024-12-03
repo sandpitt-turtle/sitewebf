@@ -10,7 +10,7 @@ remember how to be more flexible. */
 /* I do not like these at all but I don't want to be creative at the moment. */
 
 :root {
-  --rose: --rose;
+  --rose: pink;;
   --white: white
   --gray:lightgray;
   --black: #333333;
@@ -22,6 +22,7 @@ remember how to be more flexible. */
   --fontColor: var(--black);
   --footer-btnBg: var(--gray);
   --footer-btnFontColor: var(--black);
+  --h1Color:--(--white);
 }
 
 .dark-theme {
@@ -72,8 +73,7 @@ html, body {
 h1 {
   font-family: 'One Piece Font';
   font-size: xx-large;
-  color: var(--h1Color);
-  background: var(--bg);
+  color: white !important;
 
 }
 
@@ -111,12 +111,15 @@ a {
 
 
 
-/* I added the zoom effect for the tiny-left hand logo.  */
+/* I added the zoom effect for the tiny-left hand logo. 
+TRIED TO ADD THE FLEXLAYOUT PIECE HERE: */
 
 #logo {
   display: flex;
   align-items: center;
+  justify-content: flex-start;
   gap: 0.5em;
+  padding: 0.5em;
 }
 
 #logo .logo-icon {
@@ -130,7 +133,13 @@ a {
   transform: scale(1.2);
 }
 
+/* Styling title (or not. idk) */
 
+#logo h1 {
+  font-size:xx-large;
+  color: var(--h1Color);
+  margin 0;
+}
 
 /* nav bar needs simplifying  */
 nav {
