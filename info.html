@@ -3,20 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <script defer src="/javascript.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="/script.js"></script>
     <title>Sandpit Turtle</title>
   </head>
 
   <body>
     <nav> 
       <div id="logo">
-        <h1>Sandpit Turtle</h1>
+        <a href="sandpit.html">
+          <img src="assets/images/luffy.webp" alt="Sandpit Turtle Icon" class="logo-icon" />
+        </a>
+        <h1>SANDPIT TURTLE</h1>
       </div>
       <div id="links">
-        <a href="index.html">BACK TO SANDPIT</a>
-        <a href="about.html">INFO</a>
+        <a href="sandpit.html">BACK TO SANDPIT</a>
+        <a href="info.html">INFO</a>
         <a href="portfolio.html">PORTFOLIO</a>
+        <a href="contact.html">CONTACT</a>
       </div>
     </nav>
 
@@ -28,7 +32,9 @@
   
 
     <h2>Flowers</h2>
-    <img src="fleurs.jpg" alt="fleurs" class="images" />
+    <div class="zoom-container">
+    <img src="assets/images/fleurs.jpg" alt="fleurs" class="pimages" />
+    </div>
     <p>
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed, iusto
       explicabo! Consequatur rerum vitae aperiam est quasi? A, porro, ullam illo
@@ -49,7 +55,10 @@
     <br />
 
     <h2>Noodles</h2>
-    <img src="noodles.webp" alt="noodles" class="images" /> 
+    <div class="zoom-container">
+    <img src="assets/images/noodles.webp" alt="noodles" class="images" /> 
+    </div>
+
     <p>
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed, iusto
       explicabo! Consequatur rerum vitae aperiam est quasi? A, porro, ullam illo
@@ -68,7 +77,9 @@
    <br />
 
     <h2>Science</h2>
-    <img src="stussy.jpg" alt="stussy" , class="images" />
+    <div class="zoom-container">
+    <img src="assets/images/Stussy.jpg" alt="stussy" , class="images" />
+    </div>
     <p>
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed, iusto
       explicabo! Consequatur rerum vitae aperiam est quasi? A, porro, ullam illo
@@ -86,13 +97,16 @@
     </p>
   </main>
     <footer>
-      <a href="https://github.com/sandpitt-turtle" target="_blank">
-          <img class="media-link" src="github-logo.png" alt="github">
-      <a href="https:www.linkedin.com/in/wotkowicz/" target="_blank">
-          <img class="media-link" src="linkedin.png" alt="linkedin">
-      <a href="https:www.reddit.com/user/Ok_Ordinary9105/" target="_blank">
-          <img class="media-link" src="reddit.png" alt="reddit">
-      </a>
+      <div class="media-links">
+        <a href="https://github.com/sandpitt-turtle" target="_blank">
+          <img class="media-link" src="assets/images/github-logo.png" alt="github">
+        </a>
+        <a href="https://www.linkedin.com/in/wotkowicz/" target="_blank">
+          <img class="media-link" src="assets/images/linkedin.png" alt="linkedin">
+        </a>
+      
+      </div>
+
     </footer>
 
   </body>

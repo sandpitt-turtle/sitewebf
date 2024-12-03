@@ -1,8 +1,39 @@
+
+/* I worked on a lot of cool changes, 
+most notably having and providing two themes seeing as light/dark themes 
+are almost necessary these days */
+
+/* Light & Dark Theme Setup */
+/* I did a lot of researching for this 
+but I will need a lot of practice to 
+remember how to be more flexible. */
+/* I do not like these at all but I don't want to be creative at the moment. */
+
 :root {
-  --rose: white;
+  --rose: --rose;
+  --white: white
   --gray:lightgray;
   --black: #333333;
 }
+
+
+.light-theme {
+  --bg: var(--gray);
+  --fontColor: var(--black);
+  --footer-btnBg: var(--gray);
+  --footer-btnFontColor: var(--black);
+}
+
+.dark-theme {
+  --bg: var(--black);
+  --fontColor: var(--rose);
+  --footer-btnBg: var(--black);
+  --footer-btnFontColor: var(--rose);
+  --h1Color: var(--white);
+
+}
+
+
 
 * {
   box-sizing: border-box;
@@ -14,6 +45,7 @@
     display:grid
 
 } */
+
 
 .zoom-container img, .pimages, .main-image, main> img {
   width:15em;
@@ -40,6 +72,8 @@ html, body {
 h1 {
   font-family: 'One Piece Font';
   font-size: xx-large;
+  color: var(--h1Color);
+  background: var(--bg);
 
 }
 
@@ -58,29 +92,47 @@ header {
   padding: 0.5em;
 }
 
+
+/* link formatting (they are set as 'a') */
 a {
   color: pink;
   text-decoration: none;
-  font-size:large;
+  font-size:medium;
+  
 }
 
 
+
+/* I did not like the hover highlighting effect but it is saved below: */
 /* nav a:hover{
   background-color: honeydew;
 
 } */
 
-#logo{ 
-  display: flex;  
+
+
+/* I added the zoom effect for the tiny-left hand logo.  */
+
+#logo {
+  display: flex;
   align-items: center;
-  gap:0.5em;
+  gap: 0.5em;
 }
 
-.logo-icon {
-  width:3.5em;
-  height:auto;
+#logo .logo-icon {
+  width: 3.5em;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.3s ease; 
 }
 
+#logo:hover .logo-icon {
+  transform: scale(1.2);
+}
+
+
+
+/* nav bar needs simplifying  */
 nav {
   box-shadow: 0 0 0.6em -2px lightgray;
   position: fixed;
@@ -109,6 +161,8 @@ margin: 0.5em 0 0.5em 0.5em;
 }
 
 
+
+/* Quote formatting: */
 main .quote {
   font-family: sans-serif;
   color: 0;
@@ -123,6 +177,8 @@ main .quote {
   border-radius: 15px; 
   background-color: #f9f9f9;
 }
+
+
 
 footer {
   background-color: #333333;
@@ -142,8 +198,10 @@ footer {
   box-shadow: 0 0 0.6em -0.1em black;
 }
 
+
+/* Space out the links */
 footer a {
-  margin: 0 1.25em; /* Space out the links */
+  margin: 0 1.25em; 
 }
 
 footer .media-link {
@@ -181,16 +239,20 @@ footer #footer-btn::before {
   pointer-events: none;
 }
 
+
+/* This hover effect was could have been a zoom like the photos have, but it looked weird. */
 footer #footer-btn:hover {
   background: linear-gradient(135deg, #292969, #131340); 
   color: #ffccff; 
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 40px rgba(76, 76, 255, 0.5);
 }
 
-footer #footer-btn:hover::before {
+
+
+/* THIS EFFECT WAS TOO MINIMAL */
+/* footer #footer-btn:hover::before {
   opacity: 0.5; 
   background-size: 200%; /* Zoom in stars */
-}
 
 
 
@@ -216,29 +278,16 @@ footer #footer-btn:hover::before {
 
 }
 
-/* Light & Dark Theme Setup */
 
-.light-theme {
-  --bg: var(--gray);
-  --fontColor: var(--black);
-  --footer-btnBg: var(--gray);
-  --footer-btnFontColor: var(--black);
-}
-
-.dark-theme {
-  --bg: var(--black);
-  --fontColor: var(--rose);
-  --footer-btnBg: var(--black);
-  --footer-btnFontColor: var(--rose);
-
-}
 
 /* button stuff */
 
 
 
 
-/* This was the previous code before simplifying it:
+/* This was the previous code before attempting to simplifyit:
+
+
 .zoom-container {
   display: inline-block; 
   width: 100%; 
