@@ -138,7 +138,7 @@ TRIED TO ADD THE FLEXLAYOUT PIECE HERE: */
 #logo h1 {
   font-size:xx-large;
   color: var(--h1Color);
-  margin 0;
+  margin: 0;
 }
 
 /* nav bar needs simplifying  */
@@ -265,7 +265,7 @@ footer #footer-btn:hover {
 
 
 
-/* Responsiveness stuff */
+/* Responsiveness stuff / Media Queries*/
 
 @media (max-width: 30em) {
   .zoom-container img, .pimages, .main-image, main > img {
@@ -289,12 +289,10 @@ footer #footer-btn:hover {
 
 
 
-/* button stuff */
 
+/*___________________________________________________________
 
-
-
-/* This was the previous code before attempting to simplifyit:
+This was the previous code before attempting to simplifyit:
 
 
 .zoom-container {
