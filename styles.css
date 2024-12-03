@@ -1,0 +1,279 @@
+:root {
+  --rose: white;
+  --gray:lightgray;
+  --black: #333333;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+/* @media screen and (mind-width: 40em) {
+  nav ul {
+    display:grid
+
+} */
+
+.zoom-container img, .pimages, .main-image, main> img {
+  width:15em;
+  height:auto;
+  float:right;
+  margin:0.5em;
+  object-fit:cover;
+  transition: transform 0.3s ease;
+}
+
+.zoom-container:hover img {
+  transform: scale(1.2);
+}
+
+
+html, body {
+  margin:1em;
+  background: var(--bg);
+  color: var(--fontColor);
+  font-size: 1em;
+  font-family: sans-serif;
+}
+
+h1 {
+  font-family: 'One Piece Font';
+  font-size: xx-large;
+
+}
+
+
+header {
+  display: flex;
+  justify-content: flex-start;
+  position: fixed;
+  top: 0;
+  left:0;
+  right:0;
+  width: 100%;
+  background: #fff;
+  align-items: center;
+  z-index: 1000;
+  padding: 0.5em;
+}
+
+a {
+  color: pink;
+  text-decoration: none;
+  font-size:large;
+}
+
+
+/* nav a:hover{
+  background-color: honeydew;
+
+} */
+
+#logo{ 
+  display: flex;  
+  align-items: center;
+  gap:0.5em;
+}
+
+.logo-icon {
+  width:3.5em;
+  height:auto;
+}
+
+nav {
+  box-shadow: 0 0 0.6em -2px lightgray;
+  position: fixed;
+  top:0;
+  left: 0;
+  right: 0;
+  align-items: center;
+  background-color: #333333;
+  color: black;
+  display: flex;
+  height: 4em;
+  padding: 0.5em;
+  display: flex;
+  justify-content: space-between;
+}
+
+main {
+  padding-top: 4em;
+  padding-bottom:5px;
+}
+
+main > img {
+width: 15em;
+float: right;
+margin: 0.5em 0 0.5em 0.5em;
+}
+
+
+main .quote {
+  font-family: sans-serif;
+  color: 0;
+  font-size: 2.5em;
+  font-weight: 100;
+  text-shadow: 0.05em 0.05em 0.1em blanchedalmond;
+  text-align: center;
+  margin-top: 4em;
+  margin-bottom: 4em;
+  padding: 2em; 
+  border: 2px solid #ccc; 
+  border-radius: 15px; 
+  background-color: #f9f9f9;
+}
+
+footer {
+  background-color: #333333;
+  color: aliceblue;
+  height: auto;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 0 0.6em -0.1em black;
+}
+
+footer a {
+  margin: 0 1.25em; /* Space out the links */
+}
+
+footer .media-link {
+  height: 1.5em;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+footer #footer-btn {
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #1a1a3d, #0a0a23); 
+  color: #ffffff;
+  font-size: 0.75em;
+  font-weight: bold;
+  border: 1px solid #4c4cff;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(76, 76, 255, 0.5);
+  transition: all 0.3s ease;
+}
+
+footer #footer-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('/assets/images/sky.webp'); 
+  background-size: 150%;
+  opacity: 0.2; 
+  z-index: 0;
+  pointer-events: none;
+}
+
+footer #footer-btn:hover {
+  background: linear-gradient(135deg, #292969, #131340); 
+  color: #ffccff; 
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 40px rgba(76, 76, 255, 0.5);
+}
+
+footer #footer-btn:hover::before {
+  opacity: 0.5; 
+  background-size: 200%; /* Zoom in stars */
+}
+
+
+
+/* Responsiveness stuff */
+
+@media (max-width: 30em) {
+  .zoom-container img, .pimages, .main-image, main > img {
+    width: 100%;
+    float: none;
+    margin: 1em 0;
+  }
+
+  nav {
+    flex-direction: column;
+    height: auto;
+  }
+}
+
+/* Font stuff */
+@font-face {
+  font-family: 'One Piece Font';
+  src: url('./assets/fonts/onepiece.ttf') format('truetype');
+
+}
+
+/* Light & Dark Theme Setup */
+
+.light-theme {
+  --bg: var(--gray);
+  --fontColor: var(--black);
+  --footer-btnBg: var(--gray);
+  --footer-btnFontColor: var(--black);
+}
+
+.dark-theme {
+  --bg: var(--black);
+  --fontColor: var(--rose);
+  --footer-btnBg: var(--black);
+  --footer-btnFontColor: var(--rose);
+
+}
+
+/* button stuff */
+
+
+
+
+/* This was the previous code before simplifying it:
+.zoom-container {
+  display: inline-block; 
+  width: 100%; 
+  height: 100%; 
+  
+}
+
+.zoom-container img {
+  width: 15em;
+  height:auto;
+  float:right;
+  margin-right: 0.75em;
+  margin-bottom:0.75em;
+  /* width: 100%;
+  height: 100%; */
+  /* object-fit: cover; 
+  transition: transform 0.3s ease; 
+}
+
+.zoom-container:hover img {
+  transform: scale(1.2); 
+} */
+
+
+/* .pimages {
+  width: 15em;
+  height:auto;
+  float:right;
+  margin-right: 0.75em;
+  margin-bottom:0.75em;
+}
+
+.main-image {
+  width: 15em;
+  height:auto;
+  float:right;
+  padding-bottom: 6em
+} */
