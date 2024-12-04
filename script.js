@@ -91,7 +91,11 @@ const fmessage =document.getElementById('f_message');
   const name = document.getElementById('name_text').value;
     //retrieves value entered by user 'name_text'
 
-  fmessage.textContent = `We have recieved your message,  ${name}`;
+  fmessage.innerHTML = `We have received your message, 
+  <span id="highlighted_name">
+  ${name}
+  </span>`;
+
     //this is a personalized success message incorporating the user's name
 
   form.style.display = 'none';

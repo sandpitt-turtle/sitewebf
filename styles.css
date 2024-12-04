@@ -1,4 +1,10 @@
 
+
+/*ALL THIS IMPORTED NONSENSE*/
+@import url('https://fonts.googleapis.com/css2?family=Zen+Tokyo+Zoo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap');
+
 /* Light & Dark Theme Setup */
 /* I did a lot of researching for this 
 but I will need a lot of practice to 
@@ -35,6 +41,8 @@ but I didnt find anything as flexible*/
 
 * {
   box-sizing: border-box;
+
+
 }
 
 .image {
@@ -56,7 +64,8 @@ html, body {
   background: var(--bg);
   color: var(--fontColor);
   font-size: 1em;
-  font-family: sans-serif;
+  font-weight: lighter;
+  font-family: 'Roboto Condensed',sans-serif;
   transition: background 0.3s ease, color 0.3s ease;
 }
 
@@ -67,6 +76,17 @@ h1 {
 
 }
 
+h2 {
+  font-family: 'Zen Tokyo Zoo';
+  font-weight: lighter;
+}
+
+h3 {
+  font-family: 'Sawarabi Mincho', sans-serif;
+
+}
+
+
 form p {
   font-size: small;
   font-family:Arial, Helvetica, sans-serif;
@@ -74,6 +94,18 @@ form p {
   margin-bottom: 1em;
 
 }
+
+#f_message {
+  font-family: 'Roboto Condensed';
+  font-weight: lighter;
+  font-size: x-large;
+}
+
+#highlighted_name {
+  font-family: 'Zen Tokyo Zoo';
+  font-size: x-large;
+}
+
 
 /*Breaking down the elemnts in the following section of code for practice */
 header {
@@ -168,12 +200,12 @@ main > img {
 }
 
 main .quote {
-  font-family: sans-serif;
-  font-size: 2.5em;
-  font-weight: 100;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: clamp(1em, 3vw, 2.5em); /* Adjust size dynamically between 1.5em and 2.5em based on the viewport width */
+  font-weight: lighter;
   text-shadow: 0.05em 0.05em 0.1em blanchedalmond;
   text-align: center;
-  margin: 4em 0;
+  margin: 5em 0;
   padding: 2em; 
   border: 0.125em solid #ccc; 
   border-radius: 0.9375em; 
@@ -211,6 +243,7 @@ footer #footer-btn {
   padding: 0.625em 1.25em;
   background: linear-gradient(135deg, #1a1a3d, #0a0a23); 
   color: #ffffff;
+  font-family: 'Roboto Condensed', serif;
   font-size: 0.75em;
   font-weight: bold;
   border: 0.0625em solid #4c4cff;
@@ -242,7 +275,10 @@ footer #footer-btn:hover {
 }
 
 
+
+
 /* Responsiveness stuff / Media Queries*/
+
 
 @media (max-width: 30em) {
   .image {
@@ -256,11 +292,26 @@ footer #footer-btn:hover {
   }
 }
 
+
 @font-face {
   font-family: 'One Piece Font';
   src: url('./assets/fonts/onepiece.ttf') format('truetype');
 }
 
+@keyframes fadeIn {
+  from {
+    opacity:0;
+    transform: translateY(1em);
+  }
+  to {
+    opacity:1;
+    transform: transalteY(0);
+  }
+}
+
+#f_message {
+  animation: fadeIn 0.5s ease-in-out;
+}
 
 
 
