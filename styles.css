@@ -29,6 +29,8 @@ but I didnt find anything as flexible*/
   --footer-btnBg: var(--gray);
   --footer-btnFontColor: var(--black);
   --h1Color: var(--black);
+  --glowFontColor:#c29fff;
+  --glowShadow:#d8b6ff;
 }
 
 .dark-theme {
@@ -37,6 +39,8 @@ but I didnt find anything as flexible*/
   --footer-btnBg: var(--black);
   --footer-btnFontColor: var(--rose);
   --h1Color: var(--white);
+  --glowFontColor: #9b7aff; 
+  --glowShadow: #bb99ff;  
 }
 
 * {
@@ -144,11 +148,18 @@ header {
   color code has a blue tint and half tansparency (the 0.5)*/
 }
 
-a {
-  color: pink;
+nav a {
+  color: pink !important;
   text-decoration: none;
   font-size:medium;
-  
+  font-family: 'Roboto Condensed',sans-serif;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+
+}
+
+nav a:hover {
+  color: var(--glowFontColor); /* Light glowing purple */
+  text-shadow: 0 0 0.5em var(--glowShadow), 0 0 1em var(--glowShadow); /* Glowing shadow effect */
 }
 
 #logo {
