@@ -3,22 +3,39 @@
 'use strict'; //Idk, I saw this in a tutorial)
 
 
-//Attempting to replace the form with a response message after submission.
 const form = document.getElementById('contact_form');
-const contactMessage = document.getElementById('contact_message')
-const fmessage =document.getElementById('f_message');
+  //this retrieves the HTML form element, 'contact_form', and assigns it to 'form'
 
-form.addEventListener('submit', (event) => {
-  event.preventDefault();
+const contactMessage = document.getElementById('contact_message')
+  //this retireves element with id 'contact_message' and assigns it to "contactMessage"
+
+const fmessage =document.getElementById('f_message');
+  //this retireves element with id 'f_message'and assigns it to "fmessage"
+
+
+  form.addEventListener('submit', function(event) 
+     /*this adds event listener to listen for the 'submit' event. 
+       When form is sent, the listener will run.*/
+  {
+    event.preventDefault();
+    // prevents default action, which is refreshing the page i guess 
+
 
   //Adding name of user from form to the message
 
   const name = document.getElementById('name_text').value;
+    //retrieves value entered by user 'name_text'
 
-  fmessage.textContent = `Message Recieved,  ${name}`;
+  fmessage.textContent = `We have recieved your message,  ${name}`;
+    //this is a personalized success message incorporating the user's name
 
   form.style.display = 'none';
+    //hides the form by changing display to 'none' in CSS file
+
   contactMessage.style.display = "block";
+    //displays contact message by changing display to 'block' in the CSS file
+
+  
 });
 
 /*The form should be hidden after submitting 
