@@ -1,66 +1,55 @@
 
-/* I worked on a lot of cool changes, 
-most notably having and providing two themes seeing as light/dark themes 
-are almost necessary these days */
-
 /* Light & Dark Theme Setup */
 /* I did a lot of researching for this 
 but I will need a lot of practice to 
 remember how to be more flexible. */
 /* I do not like these at all but I don't want to be creative at the moment. */
-
 :root {
   --rose: pink;
   --white: white;
-  --gray:lightgray;
+  --light-bg: #f5f5f5; 
   --black: #333333;
+  --dark-bg: #121212; 
+  --dark-accent: #1a1a1a; 
+  --button-hover: #292929;
 }
 
 
+/*I investigated using something other than var, 
+but I didnt find anything as flexible*/
 .light-theme {
   --bg: var(--gray);
   --fontColor: var(--black);
   --footer-btnBg: var(--gray);
   --footer-btnFontColor: var(--black);
-  --h1Color:--(--white);
+  --h1Color: var(--black);
 }
 
 .dark-theme {
-  --bg: var(--black);
+  --bg: var(--dark-bg);
   --fontColor: var(--rose);
   --footer-btnBg: var(--black);
   --footer-btnFontColor: var(--rose);
   --h1Color: var(--white);
-
 }
-
-
 
 * {
   box-sizing: border-box;
 }
 
-
-/* @media screen and (mind-width: 40em) {
-  nav ul {
-    display:grid
-
-} */
-
-
-.zoom-container img, .pimages, .main-image, main> img {
-  width:15em;
-  height:auto;
-  float:right;
-  margin:0.5em;
-  object-fit:cover;
+.image {
+  width: 15em;
+  height: auto;
+  float: right;
+  margin: 0.5em;
+  object-fit: cover;
   transition: transform 0.3s ease;
 }
+
 
 .zoom-container:hover img {
   transform: scale(1.2);
 }
-
 
 html, body {
   margin:1em;
@@ -68,6 +57,7 @@ html, body {
   color: var(--fontColor);
   font-size: 1em;
   font-family: sans-serif;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 h1 {
@@ -85,23 +75,43 @@ form p {
 
 }
 
-
+/*Breaking down the elemnts in the following section of code for practice */
 header {
+  /* this will target the 'header' element in the HTML file*/
   display: flex;
-  justify-content: flex-start;
+  /* this will define the seciton as a flex layout
+  It also enables available flex properties*/
+  justify-content: space-between;
+  /*this will align child elements horizontially 
+  'space-between' places the first element left last right. 
+  The 'space between' here places them evenely spaced */
   position: fixed;
+  /*ensures header will remain visible while scrolling*/
   top: 0;
   left:0;
   right:0;
+  /*The above property stretches the header across the width of the entire screen*/
   width: 100%;
-  background: #fff;
+  /*makes sure the header spans width of screen*/
+  background: var(--footer-btnBg);
+  /*will set background color
+  the variable '--footer-btBg is defined above*/
   align-items: center;
+  /*aligns child elements veritcally*/
   z-index: 1000;
-  padding: 0.5em;
+  /*this sets the 'stacking' order 
+  header will remain  on top of other elements (with lower z-index values)*/
+  padding: 0.5em 1em;
+  /*padding for the header
+  0.5em for top & bottom
+  1em for left and right*/ 
+  box-shadow: 0 0 10px rgba(76, 76, 255, 0.5);
+  /*taking same box shadow from original button in footer
+  0 0: ensures there is no offset horizontally or vertically
+  10px is the radius of the shadow
+  color code has a blue tint and half tansparency (the 0.5)*/
 }
 
-
-/* link formatting (they are set as 'a') */
 a {
   color: pink;
   text-decoration: none;
@@ -109,30 +119,15 @@ a {
   
 }
 
-
-
-/* I did not like the hover highlighting effect but it is saved below: */
-/* nav a:hover{
-  background-color: honeydew;
-
-} */
-
-
-
-/* I added the zoom effect for the tiny-left hand logo. 
-TRIED TO ADD THE FLEXLAYOUT PIECE HERE: */
-
 #logo {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
   gap: 0.5em;
   padding: 0.5em;
 }
 
 #logo .logo-icon {
   width: 3.5em;
-  height: auto;
   object-fit: cover;
   transition: transform 0.3s ease; 
 }
@@ -141,29 +136,24 @@ TRIED TO ADD THE FLEXLAYOUT PIECE HERE: */
   transform: scale(1.2);
 }
 
-/* Styling title (or not. idk) */
-
 #logo h1 {
   font-size:xx-large;
   color: var(--h1Color);
   margin: 0;
 }
 
-/* nav bar needs simplifying  */
 nav {
   box-shadow: 0 0 0.6em -2px lightgray;
   position: fixed;
-  top:0;
+  top: 0;
   left: 0;
   right: 0;
-  align-items: center;
   background-color: #333333;
-  color: black;
-  display: flex;
   height: 4em;
   padding: 0.5em;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 main {
@@ -172,35 +162,27 @@ main {
 }
 
 main > img {
-width: 15em;
-float: right;
-margin: 0.5em 0 0.5em 0.5em;
+  width: 15em;
+  float: right;
+  margin: 0.5em 0 0.5em 0.5em;
 }
 
-
-
-/* Quote formatting: */
 main .quote {
   font-family: sans-serif;
-  color: 0;
   font-size: 2.5em;
   font-weight: 100;
   text-shadow: 0.05em 0.05em 0.1em blanchedalmond;
   text-align: center;
-  margin-top: 4em;
-  margin-bottom: 4em;
+  margin: 4em 0;
   padding: 2em; 
-  border: 2px solid #ccc; 
-  border-radius: 15px; 
+  border: 0.125em solid #ccc; 
+  border-radius: 0.9375em; 
   background-color: #f9f9f9;
 }
-
-
 
 footer {
   background-color: #333333;
   color: aliceblue;
-  height: auto;
   padding: 1em;
   display: flex;
   flex-direction: column;
@@ -212,11 +194,9 @@ footer {
   bottom: 0;
   width: 100%;
   text-align: center;
-  box-shadow: 0 0 0.6em -0.1em black;
+  box-shadow: 0 0 0.625em -0.125em black;
 }
 
-
-/* Space out the links */
 footer a {
   margin: 0 1.25em; 
 }
@@ -228,17 +208,17 @@ footer .media-link {
 }
 
 footer #footer-btn {
-  padding: 10px 20px;
+  padding: 0.625em 1.25em;
   background: linear-gradient(135deg, #1a1a3d, #0a0a23); 
   color: #ffffff;
   font-size: 0.75em;
   font-weight: bold;
-  border: 1px solid #4c4cff;
-  border-radius: 5px;
+  border: 0.0625em solid #4c4cff;
+  border-radius: 0.3125em;
   cursor: pointer;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 0 10px rgba(76, 76, 255, 0.5);
+  box-shadow: 0 0 0.625em rgba(76, 76, 255, 0.5);
   transition: all 0.3s ease;
 }
 
@@ -252,17 +232,35 @@ footer #footer-btn::before {
   background: url('/assets/images/sky.webp'); 
   background-size: 150%;
   opacity: 0.2; 
-  z-index: 0;
   pointer-events: none;
 }
 
-
-/* This hover effect was could have been a zoom like the photos have, but it looked weird. */
 footer #footer-btn:hover {
   background: linear-gradient(135deg, #292969, #131340); 
   color: #ffccff; 
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 40px rgba(76, 76, 255, 0.5);
+  box-shadow: 0 0 1.25em rgba(255, 255, 255, 0.8), 0 0 2.5em rgba(76, 76, 255, 0.5);
 }
+
+
+/* Responsiveness stuff / Media Queries*/
+
+@media (max-width: 30em) {
+  .image {
+      width: 100%;
+      float: none;
+      margin: 1em 0;
+  }
+  nav {
+    flex-direction: column;
+    height: auto;
+  }
+}
+
+@font-face {
+  font-family: 'One Piece Font';
+  src: url('./assets/fonts/onepiece.ttf') format('truetype');
+}
+
 
 
 
@@ -270,74 +268,3 @@ footer #footer-btn:hover {
 /* footer #footer-btn:hover::before {
   opacity: 0.5; 
   background-size: 200%; /* Zoom in stars */
-
-
-
-/* Responsiveness stuff / Media Queries*/
-
-@media (max-width: 30em) {
-  .zoom-container img, .pimages, .main-image, main > img {
-    width: 100%;
-    float: none;
-    margin: 1em 0;
-  }
-
-  nav {
-    flex-direction: column;
-    height: auto;
-  }
-}
-
-/* Font stuff */
-@font-face {
-  font-family: 'One Piece Font';
-  src: url('./assets/fonts/onepiece.ttf') format('truetype');
-
-}
-
-
-
-
-/*___________________________________________________________
-
-This was the previous code before attempting to simplifyit:
-
-
-.zoom-container {
-  display: inline-block; 
-  width: 100%; 
-  height: 100%; 
-  
-}
-
-.zoom-container img {
-  width: 15em;
-  height:auto;
-  float:right;
-  margin-right: 0.75em;
-  margin-bottom:0.75em;
-  /* width: 100%;
-  height: 100%; */
-  /* object-fit: cover; 
-  transition: transform 0.3s ease; 
-}
-
-.zoom-container:hover img {
-  transform: scale(1.2); 
-} */
-
-
-/* .pimages {
-  width: 15em;
-  height:auto;
-  float:right;
-  margin-right: 0.75em;
-  margin-bottom:0.75em;
-}
-
-.main-image {
-  width: 15em;
-  height:auto;
-  float:right;
-  padding-bottom: 6em
-} */
