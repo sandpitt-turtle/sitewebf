@@ -10,8 +10,8 @@ remember how to be more flexible. */
 /* I do not like these at all but I don't want to be creative at the moment. */
 
 :root {
-  --rose: pink;;
-  --white: white
+  --rose: pink;
+  --white: white;
   --gray:lightgray;
   --black: #333333;
 }
