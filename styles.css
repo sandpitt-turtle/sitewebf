@@ -31,8 +31,6 @@ but I didnt find anything as flexible*/
   --footer-btnBg: var(--gray);
   --footer-btnFontColor: var(--black);
   --h1Color: var(--black);
-  --glowFontColor:#c29fff;
-  --glowShadow:#d8b6ff;
 }
 
 .dark-theme {
@@ -179,14 +177,13 @@ nav a {
   text-decoration: none;
   font-size:medium;
   font-family: 'Roboto Condensed',sans-serif;
-  transition: color 0.3s ease, text-shadow 0.3s ease;
+  /* transition: color 0.3s ease, text-shadow 0.3s ease; */
 
 }
 
-nav a:hover {
-  color: var(--glowFontColor); /* Light glowing purple */
-  text-shadow: 0 0 0.5em var(--glowShadow), 0 0 1em var(--glowShadow); /* Glowing shadow effect */
-}
+/* nav a:hover {
+  color: var(--glowFontColor); Light glowing purple */
+
 
 #logo {
   display: flex;
@@ -299,7 +296,7 @@ footer #footer-btn::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url('/assets/images/sky.webp'); 
+  background: black;
   background-size: 150%;
   opacity: 0.2; 
   pointer-events: none;
@@ -307,10 +304,8 @@ footer #footer-btn::before {
 
 footer #footer-btn:hover {
   background: linear-gradient(135deg, #292969, #131340); 
-  color: #ffccff; 
-  box-shadow: 0 0 1.25em rgba(255, 255, 255, 0.8), 0 0 2.5em rgba(76, 76, 255, 0.5);
+  color: rose;
 }
-
 
 
 
