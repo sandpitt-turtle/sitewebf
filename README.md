@@ -6,4 +6,4 @@ I got carried away with some JavaScript and cycled through a variety of sources 
 Also got carried away with fonts. The contact form was a real rabbit hole and I ended up setting it so the form dissapears after submittal and is replaced by a nice fade-in message "We have recieved your message, {name}" where {name} is the value entered into the "Name" section of the form. 
 Good stuff. Kind of a headache. Disregard this for now please.
 
-There is an added 'stylesflex' CSS file added that each page can be linked to in order to view that version of the site formatting.
+<b>There is an added 'stylesflex' CSS file added that each page can be linked to in order to view that version of the site formatting.< br>
