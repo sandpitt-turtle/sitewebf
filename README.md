@@ -1,5 +1,6 @@
 # sitewebf
 
+This project currently has a LOT of notes, especially in the CSS and JavaScript files. I get carried away and lose some of the info and/or fail to integrate it. Just doing what I did with language and music -- taking pieces and 'phrases' -- building sentences without all the vocabulary and focussing on form -- kinda how you should use ANKI and SRS for language. It, for me, is a more natural way to learn but it takes a while in the beginning. 
 
 I've started adding a lot of comments for now. I get confused.
 There are a lot of things I've been using in practice but need 
