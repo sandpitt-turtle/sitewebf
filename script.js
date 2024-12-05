@@ -96,7 +96,8 @@ const fmessage =document.getElementById('f_message');
   ${name}
   </span>`;
 
-    //this is a personalized success message incorporating the user's name
+    /*this is a personalized success message incorporating the user's name. 
+    span allows me to apply CSS styles to only a portion of this text.*/
 
   form.style.display = 'none';
     //hides the form by changing display to 'none' in CSS file
