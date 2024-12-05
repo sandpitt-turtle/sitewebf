@@ -10,6 +10,8 @@
 but I will need a lot of practice to 
 remember how to be more flexible. */
 /* I do not like these at all but I don't want to be creative at the moment. */
+
+
 :root {
   --rose: pink;
   --white: white;
@@ -76,7 +78,11 @@ html, body {
 h1 {
   font-family: 'One Piece Font';
   font-size: xx-large;
+
+
   color: white !important;
+/*^^!IMPORTANT USED HERE^^*/
+  
 
 }
 
@@ -134,9 +140,17 @@ header {
   the variable '--footer-btBg is defined above*/
   align-items: center;
   /*aligns child elements veritcally*/
+
+
+
   z-index: 1000;
-  /*this sets the 'stacking' order 
+  /* ^^Z-INDEX USED HERE ^^
+
+  this sets the 'stacking' order 
   header will remain  on top of other elements (with lower z-index values)*/
+
+
+
   padding: 0.5em 1em;
   /*padding for the header
   0.5em for top & bottom
