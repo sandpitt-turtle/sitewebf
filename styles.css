@@ -309,6 +309,7 @@ footer #footer-btn:hover {
   src: url('./assets/fonts/onepiece.ttf') format('truetype');
 }
 
+/* Smooth transitions: */
 @keyframes fadeIn {
   from {
     opacity:0;
