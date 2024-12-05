@@ -1,6 +1,8 @@
 # sitewebf
 
-This project currently has a LOT of notes, especially in the CSS and JavaScript files. I get carried away and lose some of the info and/or fail to integrate it. Just doing what I did with language and music -- taking pieces and 'phrases' -- building sentences without all the vocabulary and focussing on form -- kinda how you should use ANKI and SRS for language. It, for me, is a more natural way to learn but it takes a while in the beginning. 
+This project currently has a LOT of notes, especially in the CSS and JavaScript files. <br>
+<b> Unfortunately, it isn't a mobile-first deisgn. </b> I know that is a requirement, but I didn't have time to remake it into a different version. <br>
+<br>I get carried away and lose some of the info and/or fail to integrate it. Just doing what I did with language and music -- taking pieces and 'phrases' -- building sentences without all the vocabulary and focussing on form -- kinda how you should use ANKI and SRS for language. It, for me, is a more natural way to learn but it takes a while in the beginning. 
 
 I got carried away with some JavaScript and cycled through a variety of sources to add a light/dark theme among many other things. That is all extra experimental stuff -- disregard it for now.
 
