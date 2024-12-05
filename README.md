@@ -1,6 +1,10 @@
 # sitewebf
 
-This project currently has a LOT of notes, especially in the CSS and JavaScript files. <br>
+This is a long-term complex "sandbox" or <i>sandpit</i>, if you will. <br>
+Link to simpler site for course (concept demonstrationsm denos, assignments and practice etc.):
+<a href="https://github.com/sandpitt-turtle/simplersite">Simplersite</a><br>
+
+The project currently has a LOT of notes, especially in the CSS and JavaScript files. <br>
 <b> Unfortunately, it isn't a mobile-first deisgn. </b> I know that is a requirement, but I didn't have time to remake it into a different version. <br>
 <br>I get carried away and lose some of the info and/or fail to integrate it. Just doing what I did with language and music -- taking pieces and 'phrases' -- building sentences without all the vocabulary and focussing on form -- kinda how you should use ANKI and SRS for language. It, for me, is a more natural way to learn but it takes a while in the beginning. 
 
