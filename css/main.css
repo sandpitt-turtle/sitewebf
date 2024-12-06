@@ -1,13 +1,7 @@
-/*ALL THIS IMPORTED NONSENSE*/
+
 @import url('https://fonts.googleapis.com/css2?family=Zen+Tokyo+Zoo&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap');
-
-/* Light & Dark Theme Setup */
-/* I did a lot of researching for this 
-but I will need a lot of practice to 
-remember how to be more flexible. */
-/* I do not like these at all but I don't want to be creative at the moment. */
 
 
 :root {
@@ -21,16 +15,13 @@ remember how to be more flexible. */
 }
 
 
-/*I investigated using something other than var, 
-but I didnt find anything as flexible*/
 .light-theme {
   --bg: var(--gray);
   --fontColor: var(--black);
   --footer-btnBg: var(--gray);
   --footer-btnFontColor: var(--black);
   --h1Color: var(--black);
-  --glowFontColor:#c29fff;
-  --glowShadow:#d8b6ff;
+
 }
 
 .dark-theme {
@@ -39,8 +30,7 @@ but I didnt find anything as flexible*/
   --footer-btnBg: var(--black);
   --footer-btnFontColor: var(--rose);
   --h1Color: var(--white);
-  --glowFontColor: #9b7aff; 
-  --glowShadow: #bb99ff;  
+ 
 }
 
 * {
@@ -79,7 +69,7 @@ h1 {
 
 
   color: white !important;
-/*^^!IMPORTANT USED HERE^^*/
+
   
 }
 
@@ -126,49 +116,21 @@ form p {
 }
 
 
-/* Breaking down the elemnts in the following section of code for practice */
+
 header {
-  /* this will target the 'header' element in the HTML file*/
   display: flex;
-  /* this will define the seciton as a flex layout
-  It also enables available flex properties*/
   justify-content: space-between;
-  /*this will align child elements horizontially 
-  'space-between' places the first element left last right. 
-  The 'space between' here places them evenely spaced */
   position: fixed;
-  /*ensures header will remain visible while scrolling*/
   top: 0;
   left:0;
   right:0;
-  /*The above property stretches the header across the width of the entire screen*/
   width: 100%;
-  /*makes sure the header spans width of screen*/
   background: var(--footer-btnBg);
-  /*will set background color
-  the variable '--footer-btBg is defined above*/
   align-items: center;
-  /*aligns child elements veritcally */
-
-
-
   z-index: 1000;
-  /* ^^Z-INDEX USED HERE ^^
-
-  this sets the 'stacking' order 
-  header will remain  on top of other elements (with lower z-index values)*/
-
-
-
   padding: 0.5em 1em;
-  /*padding for the header
-  0.5em for top & bottom
-  1em for left and right*/ 
   box-shadow: 0 0 10px rgba(76, 76, 255, 0.5);
-  /*taking same box shadow from original button in footer
-  0 0: ensures there is no offset horizontally or vertically
-  10px is the radius of the shadow
-  color code has a blue tint and half tansparency (the 0.5)*/
+
 }
 
 nav a {
@@ -180,10 +142,6 @@ nav a {
 
 }
 
-nav a:hover {
-  color: var(--glowFontColor); /* Light glowing purple */
-  text-shadow: 0 0 0.5em var(--glowShadow), 0 0 1em var(--glowShadow); /* Glowing shadow effect */
-}
 
 #logo {
   display: flex;
@@ -236,8 +194,7 @@ main > img {
 
 main .quote {
   font-family: 'Roboto Condensed', sans-serif;
-  font-size: clamp(1em, 3vw, 2.5em); /* Adjust size dynamically between 1.5em and 2.5em based on the viewport width */
-  font-weight: lighter;
+  font-size: clamp(1em, 3vw, 2.5em); 
   text-shadow: 0.05em 0.05em 0.1em blanchedalmond;
   text-align: center;
   margin: 5em 0;
@@ -261,7 +218,6 @@ footer {
   bottom: 0;
   width: 100%;
   text-align: center;
-  box-shadow: 0 0 0.625em -0.125em black;
 }
 
 footer a {
@@ -276,17 +232,16 @@ footer .media-link {
 
 footer #footer-btn {
   padding: 0.625em 1.25em;
-  background: linear-gradient(135deg, #1a1a3d, #0a0a23); 
+  background: black;
   color: #ffffff;
   font-family: 'Roboto Condensed', serif;
   font-size: 0.75em;
-  font-weight: bold;
-  border: 0.0625em solid #4c4cff;
+  font-weight: lighter;
   border-radius: 0.3125em;
   cursor: pointer;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 0 0.625em rgba(76, 76, 255, 0.5);
+
   transition: all 0.3s ease;
 }
 
@@ -297,16 +252,15 @@ footer #footer-btn::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url('/assets/images/sky.webp'); 
+  background: black;
   background-size: 150%;
   opacity: 0.2; 
   pointer-events: none;
 }
 
 footer #footer-btn:hover {
-  background: linear-gradient(135deg, #292969, #131340); 
-  color: #ffccff; 
-  box-shadow: 0 0 1.25em rgba(255, 255, 255, 0.8), 0 0 2.5em rgba(76, 76, 255, 0.5);
+  color: grey;
+  box-shadow: 0 0 1.25em rgba(255, 255, 255, 0.8)
 }
 
 
@@ -348,9 +302,3 @@ footer #footer-btn:hover {
   animation: fadeIn 0.5s ease-in-out;
 }
 
-
-
-/* THIS EFFECT WAS TOO MINIMAL */
-/* footer #footer-btn:hover::before {
-  opacity: 0.5; 
-  background-size: 200%; /* Zoom in stars */ 

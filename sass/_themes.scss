@@ -1,15 +1,34 @@
+// Light Theme Variables
+$light-theme: (
+  bg: $light-bg,
+  fontColor: $black,
+  footer-btnBg: $light-bg,
+  footer-btnFontColor: $black,
+  h1Color: $black,
+  glowFontColor: #c29fff,
+  glowShadow: #d8b6ff
+);
+
+// Dark Theme Variables
+$dark-theme: (
+  bg: $dark-bg,
+  fontColor: $rose,
+  footer-btnBg: $black,
+  footer-btnFontColor: $rose,
+  h1Color: $white,
+  glowFontColor: #9b7aff,
+  glowShadow: #bb99ff
+);
+
+// Apply Themes
 .light-theme {
-  --bg: $gray;
-  --fontColor: $black;
-  --buttonBg: $gray;
-  --buttonFont: $black;
-  --h1Color: $black;
+  @each $key, $value in $light-theme {
+    --#{$key}: #{$value};
+  }
 }
 
 .dark-theme {
-  --bg: $dark-bg;
-  --fontColor: $rose;
-  --buttonBg: $black;
-  --buttonFont: $rose;
-  --h1Color: $white;
+  @each $key, $value in $dark-theme {
+    --#{$key}: #{$value};
+  }
 }

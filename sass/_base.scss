@@ -1,11 +1,15 @@
+// Global styles
 * {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 
+html,
 body {
-  background-color: $body-bg;
-  color: $secondary-color;
-  font-family: $font-main;
+  margin: 1em;
+  background: var(--bg);
+  color: var(--fontColor);
+  font-size: 1em;
+  font-weight: lighter;
+  font-family: $font-primary;
+  @include transition(background, color);
 }
