@@ -1,0 +1,21 @@
+.button {
+  @include border-radius(5px);
+  background-color: $primary-color;
+  padding: 10px 15px;
+  color: $white;
+  text-transform: uppercase;
+
+  &:hover {
+    background-color: darken($primary-color, 10%);
+  }
+}
+
+.quote {
+  text-align: center;
+  margin: 5em 0;
+  padding: 2em;
+  font-size: clamp(1em, 3vw, 2.5em);
+  background: lighten($gray, 10%);
+  border: 1px solid darken($gray, 10%);
+  border-radius: 1em;
+}

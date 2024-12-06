@@ -1,0 +1,15 @@
+.light-theme {
+  --bg: $gray;
+  --fontColor: $black;
+  --buttonBg: $gray;
+  --buttonFont: $black;
+  --h1Color: $black;
+}
+
+.dark-theme {
+  --bg: $dark-bg;
+  --fontColor: $rose;
+  --buttonBg: $black;
+  --buttonFont: $rose;
+  --h1Color: $white;
+}
