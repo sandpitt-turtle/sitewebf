@@ -1,0 +1,188 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Zen+Tokyo+Zoo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap');
+
+
+@import 'variables';
+
+@import 'variables';
+@import 'mixins';
+
+// Apply mixin
+.button {
+  @include border-radius(5px);
+  background-color: $primary-color;
+  padding: 10px 15px;
+}
+
+
+:root {
+  --rose: pink;
+  --white: white;
+  --black: #333;
+  --gray: #f5f5f5;
+  --dark-bg: #121212;
+  --dark-accent: #1a1a1a;
+}
+
+.light-theme {
+  --bg: var(--gray);
+  --fontColor: var(--black);
+  --buttonBg: var(--gray);
+  --buttonFont: var(--black);
+  --h1Color: var(--black);
+}
+
+.dark-theme {
+  --bg: var(--dark-bg);
+  --fontColor: var(--rose);
+  --buttonBg: var(--black);
+  --buttonFont: var(--rose);
+  --h1Color: var(--white);
+}
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: $body-bg;
+  color: $secondary-color;
+}
+
+h1 {
+  color: $primary-color;
+}
+
+h2 {
+  font-family: 'Zen Tokyo Zoo', sans-serif;
+}
+
+h3 {
+  font-family: 'Sawarabi Mincho', sans-serif;
+}
+
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  padding: 0.5em 1em;
+  background: var(--buttonBg);
+  box-shadow: 0 0 10px rgba(76, 76, 255, 0.5);
+  z-index: 1000;
+}
+
+header a {
+  margin: 0 1.25em;
+  color: pink !important;
+  text-decoration: none;
+}
+
+
+nav {
+  ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+      margin: 0 10px;
+
+      a {
+        color: $primary-color;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+
+
+main {
+  padding: 4em 12em 5em;
+  max-width: calc(100% - 24em);
+  min-height: calc(100vh - 10em);
+  overflow-y: auto;
+}
+
+main img {
+  width: 15em;
+  float: right;
+  margin: 0.5em;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+main img:hover {
+  transform: scale(1.2);
+}
+
+.quote {
+  text-align: center;
+  margin: 5em 0;
+  padding: 2em;
+  font-size: clamp(1em, 3vw, 2.5em);
+  background: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 1em;
+}
+
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  padding: 1em;
+  text-align: center;
+  background: #333;
+  color: aliceblue;
+  box-shadow: 0 0 10px black;
+}
+
+
+@media (max-width: 30em) {
+  main img {
+    width: 100%;
+    float: none;
+    margin: 1em 0;
+  }
+  nav {
+    flex-direction: column;
+  }
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(1em);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#f_message {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@font-face {
+  font-family: 'One Piece Font';
+  src: url('./assets/fonts/onepiece.ttf') format('truetype');
+}
