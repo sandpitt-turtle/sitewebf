@@ -4,6 +4,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap');
 
 
+@import 'variables';
+
+@import 'variables';
+@import 'mixins';
+
+// Apply mixin
+.button {
+  @include border-radius(5px);
+  background-color: $primary-color;
+  padding: 10px 15px;
+}
+
+
 :root {
   --rose: pink;
   --white: white;
@@ -36,18 +49,13 @@
   padding: 0;
 }
 
-html, body {
-  font-family: 'Roboto Condensed', sans-serif;
-  font-size: 1em;
-  background: var(--bg);
-  color: var(--fontColor);
-  height: 100%;
+body {
+  background-color: $body-bg;
+  color: $secondary-color;
 }
 
 h1 {
-  font-family: 'One Piece Font';
-  color: var(--h1Color);
-  font-size: xx-large;
+  color: $primary-color;
 }
 
 h2 {
@@ -82,13 +90,25 @@ header a {
 
 
 nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #333;
-  height: 4em;
-  padding: 0.5em;
+  ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+      margin: 0 10px;
+
+      a {
+        color: $primary-color;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
 }
+
 
 
 main {

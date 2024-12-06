@@ -221,21 +221,7 @@ nav {
   align-items: center;
 }
 
-#leftnav {
-  position: fixed;
-  top:4em; 
-  left:0;
-  width:15em;
-  height:calc(100vh-4rm);
-  background-color: #333333;
-  overflow-y:auto;
-  z-index:1000;
-}
 
-#leftnav{
-  
-
-}
 
 main {
   padding-top: 4em;
@@ -344,7 +330,7 @@ footer #footer-btn:hover {
 
 @font-face {
   font-family: 'One Piece Font';
-  src: url('./assets/fonts/onepiece.ttf') format('truetype');
+  src: url(/assets/fonts/onepiece.ttf) format('truetype');
 }
 
 @keyframes fadeIn {
@@ -367,4 +353,4 @@ footer #footer-btn:hover {
 /* THIS EFFECT WAS TOO MINIMAL */
 /* footer #footer-btn:hover::before {
   opacity: 0.5; 
-  background-size: 200%; /* Zoom in stars */.  
+  background-size: 200%; /* Zoom in stars */ 
