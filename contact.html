@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
     <title>Sandpit Turtle</title>
   </head>
 
@@ -11,11 +11,7 @@
     <nav>
       <div id="logo">
         <a href="sandpit.html">
-          <img
-            src="assets/images/luffy.webp"
-            alt="Sandpit Turtle Icon"
-            class="logo-icon"
-          />
+          <img src="assets/images/luffy.webp" alt="Sandpit Turtle Icon" class="logo-icon" />
         </a>
         <h1>SANDPIT TURTLE</h1>
       </div>
@@ -26,54 +22,55 @@
         <a href="contact.html">CONTACT</a>
       </div>
     </nav>
+  <main> 
+  <h2> CONTACT<h2>
 
-    <main>
-      <h2>CONTACT</h2>
+    <!-- adding from previous exercise and editing -->
+    <form id="contact_form">
+      <p>
+        Name <br />
+        <input type="text" id="name_text" />
+      </p>
+      <p>
+        Email <br />
+        <input type="text" />
+      </p>
+      <p>
+        Message <br />
+        <textarea></textarea>
 
-      <form id="contact_form">
-        <p>
-          Name <br />
-          <input type="text" id="name_text" />
-        </p>
-        <p>
-          Email <br />
-          <input type="text" />
-        </p>
-        <p>
-          Message <br />
-          <textarea></textarea>
-        </p>
-        <p>
-          <button class="sendbutton" type="submit">Send</button>
-        </p>
-      </form>
+      </p>
 
-      <div id="contact_message" style="display: none">
-        <p id="f_message"></p>
-      </div>
-    </main>
+      <p>
+      <button class="sendbutton" type="submit">Send</button>
 
+    </form>
+
+    
+  <div id="contact_message" style="display: none;">
+    <p id = "f_message"> </p>
+  </div>
+
+
+  </main>
     <footer>
       <div class="media-links">
         <a href="https://github.com/sandpitt-turtle" target="_blank">
-          <img
-            class="media-link"
-            src="assets/images/github-logo.png"
-            alt="GitHub"
-          />
+          <img class="media-link" src="assets/images/github-logo.png" alt="github">
         </a>
         <a href="https://www.linkedin.com/in/wotkowicz/" target="_blank">
-          <img
-            class="media-link"
-            src="assets/images/linkedin.png"
-            alt="LinkedIn"
-          />
+          <img class="media-link" src="assets/images/linkedin.png" alt="linkedin">
         </a>
+      
       </div>
+      
       <button id="footer-btn">Switch to Dark Theme</button>
+      
     </footer>
 
-    <script src="script.js"></script>
-    <noscript>You need to enable JavaScript to view the full site.</noscript>
+ 
+<script src="script.js"></script>
+<noscript>You need to enable JavaScript to view the full site.</noscript>
+      
   </body>
 </html>
