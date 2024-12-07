@@ -1,5 +1,25 @@
 "use strict"; // demo said to
 
+
+document.addEventListener("DOMContentLoaded", () => {
+  const sidebar = document.getElementById("leftsidebar");
+  const openBtn = document.getElementById("openBtn");
+  const closeBtn = document.getElementById("closeBtn");
+
+  // Add event listeners
+  openBtn.addEventListener("click", () => {
+    console.log("Open button clicked");
+    sidebar.classList.add("leftsidebar-visible");
+  });
+
+  closeBtn.addEventListener("click", () => {
+    console.log("Close button clicked");
+    sidebar.classList.remove("leftsidebar-visible");
+  });
+});
+
+
+
 const themeToggleButton = document.getElementById("footer-btn");
 const bodyElement = document.body;
 

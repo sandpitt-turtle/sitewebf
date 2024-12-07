@@ -1,12 +1,13 @@
 nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  background-color: #333333;
-  height: 4em;
-  padding: 0.5em;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  background-color: #333; /* Navigation background color */
+  padding: 0.5em 1em;
+  height: 4em;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  gap: 1em; /* Spacing between the button and the logo */
 }

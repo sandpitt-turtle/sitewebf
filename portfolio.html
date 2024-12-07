@@ -4,28 +4,35 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/main.css" />
-    <title>Sandpit Portfolio</title>
+    <title>Sandpit Turtle</title>
   </head>
 
-  <body>
+  <body class="light-theme">
     <nav>
-      <div id="logo">
-        <a href="sandpit.html">
-          <img
-            src="assets/images/luffy.webp"
-            alt="Sandpit Turtle Icon"
-            class="logo-icon"
-          />
-        </a>
-        <h1>SANDPIT TURTLE</h1>
-      </div>
-      <div id="links">
-        <a href="sandpit.html">BACK TO SANDPIT</a>
-        <a href="info.html">INFO</a>
-        <a href="portfolio.html">PORTFOLIO</a>
-        <a href="contact.html">CONTACT</a>
+      <div class="nav-container">
+        <button id="openBtn">☰</button>
+        <div id="logo">
+          <a href="sandpit.html">
+            <img
+              src="assets/images/luffy.webp"
+              alt="Sandpit Turtle Icon"
+              class="logo-icon"
+            />
+          </a>
+          <h1>SANDPIT TURTLE</h1>
+        </div>
       </div>
     </nav>
+
+    <div id="leftsidebar">
+      <button id="closeBtn">×</button>
+      <ul>
+        <li><a href="sandpit.html">BACK TO SANDPIT</a></li>
+        <li><a href="info.html">INFO</a></li>
+        <li><a href="portfolio.html">PORTFOLIO</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+      </ul>
+    </div>
 
     <main>
       <section>

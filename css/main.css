@@ -40,7 +40,8 @@
 
 html,
 body {
-  margin: 1em;
+  margin: 0;
+  padding: 0;
   background: var(--bg);
   color: var(--fontColor);
   font-size: 1em;
@@ -87,6 +88,30 @@ form p {
   color: black;
 }
 
+#closeBtn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+#openBtn {
+  font-size: 1.5em;
+  background-color: transparent;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 0.5em;
+}
+
+#openBtn:hover {
+  color: #f1c40f;
+}
+
 .sendbutton {
   display: flex;
   padding: 0.3em 0.6em;
@@ -118,6 +143,40 @@ form p {
 footer #footer-btn:hover {
   background: linear-gradient(135deg, #292969, #131340);
   box-shadow: none;
+}
+
+#leftsidebar {
+  position: fixed;
+  top: 0;
+  left: -250px; /* Sidebar hidden by default */
+  width: 15em;
+  height: 100%;
+  background-color: #333;
+  color: pink;
+  transition: left 0.3s ease;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.leftsidebar-visible {
+  left: 0 !important; /* Sidebar slides into view */
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+ul li {
+  padding: 15px 20px;
+  border-bottom: 1px solid #444;
+}
+ul li a {
+  color: white;
+  text-decoration: none;
+}
+ul li a:hover {
+  color: #f1c40f;
 }
 
 footer {
@@ -171,38 +230,25 @@ header {
   align-items: center;
   z-index: 1000;
   padding: 0.5em 1em;
-  box-shadow: 0 0 10px rgba(76, 76, 255, 0.5);
 }
 
 #logo {
   display: flex;
   align-items: center;
-  gap: 0.5em;
-  padding: 0.5em;
+  gap: 1em;
 }
 
-#logo .logo-icon {
-  width: 3.5em;
+#logo img.logo-icon {
+  width: 2em;
+  height: 2em;
   object-fit: cover;
-  transition: transform 0.3s ease;
-}
-
-#logo:hover .logo-icon {
-  transform: scale(1.2);
 }
 
 #logo h1 {
-  font-size: xx-large;
-  color: var(--h1Color);
+  font-size: 1.5em;
+  color: white;
   margin: 0;
-}
-
-nav a {
-  color: pink !important;
-  text-decoration: none;
-  font-size: medium;
-  font-family: "Roboto Condensed", sans-serif;
-  transition: color 0.3s ease, text-shadow 0.3s ease;
+  font-family: "One Piece Font", sans-serif;
 }
 
 main {
@@ -229,16 +275,17 @@ main .quote {
 }
 
 nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  background-color: #333333;
-  height: 4em;
-  padding: 0.5em;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  background-color: #333; /* Navigation background color */
+  padding: 0.5em 1em;
+  height: 4em;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  gap: 1em; /* Spacing between the button and the logo */
 }
 
 .dark-theme {

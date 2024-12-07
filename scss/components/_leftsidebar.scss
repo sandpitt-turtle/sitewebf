@@ -1,0 +1,37 @@
+#leftsidebar {
+  position: fixed;
+  top: 0;
+  left: -250px; /* Sidebar hidden by default */
+  width: 15em;
+  height: 100%;
+  background-color: #333;
+  color: pink;
+  transition: left 0.3s ease;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.leftsidebar-visible {
+  left: 0 !important; /* Sidebar slides into view */
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    padding: 15px 20px;
+    border-bottom: 1px solid #444;
+
+    a {
+      color: white;
+      text-decoration: none;
+
+      &:hover {
+        color: #f1c40f;
+      }
+    }
+  }
+}
+
