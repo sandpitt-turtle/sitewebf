@@ -1,15 +1,7 @@
 
-
-/*ALL THIS IMPORTED NONSENSE*/
 @import url('https://fonts.googleapis.com/css2?family=Zen+Tokyo+Zoo&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap');
-
-/* Light & Dark Theme Setup */
-/* I did a lot of researching for this 
-but I will need a lot of practice to 
-remember how to be more flexible. */
-/* I do not like these at all but I don't want to be creative at the moment. */
 
 
 :root {
@@ -23,8 +15,6 @@ remember how to be more flexible. */
 }
 
 
-/*I investigated using something other than var, 
-but I didnt find anything as flexible*/
 .light-theme {
   --bg: var(--gray);
   --fontColor: var(--black);
@@ -39,8 +29,6 @@ but I didnt find anything as flexible*/
   --footer-btnBg: var(--black);
   --footer-btnFontColor: var(--rose);
   --h1Color: var(--white);
-  --glowFontColor: #9b7aff; 
-  --glowShadow: #bb99ff;  
 }
 
 * {
@@ -63,52 +51,23 @@ but I didnt find anything as flexible*/
   transform: scale(1.2);
 }
 
-
-header {
-  background-color: #333;
-  color: aliceblue;
-  width: 100%;
-  text-align: center;
-  box-shadow: 0 0 10px black;
-  padding: 1em 0;
-  margin: 0;
-}
-
-
-
-header a {
-  margin: 0 1.25em; 
-}
-
-
-.media-link {
-  height: 1.5em;
-  justify-content: center;
-  margin-bottom: 20px;
-}
-
 html, body {
-  margin: 0;
+  margin:1em;
   background: var(--bg);
   color: var(--fontColor);
   font-size: 1em;
   font-weight: lighter;
-  font-family: 'Roboto Condensed', sans-serif;
-  /* transition: background 0.3s ease, color 0.3s ease; */
-  box-sizing: border-box; /* Ensure padding and borders don't affect width */
-  height:100%;
+  font-family: 'Roboto Condensed',sans-serif;
+  transition: background 0.3s ease, color 0.3s ease;
 }
-
 
 h1 {
   font-family: 'One Piece Font';
   font-size: xx-large;
-  
+
 
   color: white !important;
-/*^^!IMPORTANT USED HERE^^*/
   
-
 }
 
 h2 {
@@ -120,7 +79,6 @@ h3 {
   font-family: 'Sawarabi Mincho', sans-serif;
 
 }
-
 
 
 form p {
@@ -155,56 +113,31 @@ form p {
 }
 
 
-/* #sidenav a {
+
+header {
+
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left:0;
+  right:0;
+  width: 100%;
+  background: var(--footer-btnBg);
+  align-items: center;
+  z-index: 1000;
+  padding: 0.5em 1em;
+  box-shadow: 0 0 10px rgba(76, 76, 255, 0.5);
+
+}
+
+nav a {
   color: pink !important;
   text-decoration: none;
-  display:block;
   font-size:medium;
   font-family: 'Roboto Condensed',sans-serif;
-  /* transition: color 0.3s ease, text-shadow 0.3s ease; */
+  transition: color 0.3s ease, text-shadow 0.3s ease;
 
-/* } */ 
-
-
-#leftnav {
-  box-shadow: 0 0 0.6em -2px lightgray;
-  position: fixed;
-  top: 4em;
-  left:0;
-  width: 12em;
-  height: calc(100vh - 4em - 5em); /* Adjust height to stop just under the header */
-  background-color: #333333;
-  padding: 0.2em;
-  z-index: 1;
-}
-
-#leftnav #logo {
-  margin-bottom: 1em;
-  text-align: center;
-}
-
-#leftnav #links a {
-  display: flex;
-  color: pink;
-  
-
-}
-
-
-#rightnav {
-  position: fixed;
-  top: 4em;
-  right: 0;
-  width: 12em;
-  height: calc(100vh - 4em - 5em); /* Adjust height to stop just under the header */
-  background-color: #333; 
-  color: white;
-  padding: 20px;
-  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  z-index: 1;
 }
 
 
@@ -231,20 +164,25 @@ form p {
   margin: 0;
 }
 
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #333333;
+  height: 4em;
+  padding: 0.5em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 
 
 main {
-  padding-top: 4em; /* Adjusted for header space */
-  padding-bottom: 5em; /* Adjusted for footer space */
-  margin-left: 12em;
-  margin-right: 12em;
-  max-width: calc(100% - 24em); 
-  box-sizing: border-box;
-  margin-top: 3em;
-  min-height: calc(100vh - 10em); /* Fill available space but allow scrolling */
-  overflow-y: auto; /* Content can scroll */
+  padding-top: 4em;
+  padding-bottom:5px;
 }
-
 
 main > img {
   width: 15em;
@@ -252,38 +190,39 @@ main > img {
   margin: 0.5em 0 0.5em 0.5em;
 }
 
-
 main .quote {
   font-family: 'Roboto Condensed', sans-serif;
-  font-size: clamp(1em, 3vw, 2.5em);
-  font-weight: lighter;
+  font-size: clamp(1em, 3vw, 2.5em); 
   text-shadow: 0.05em 0.05em 0.1em blanchedalmond;
   text-align: center;
-  margin: 3em 1em;
-  padding: 1em;
-  border: 1px solid #ccc;
-  border-radius: 1em;
+  margin: 5em 0;
+  padding: 2em; 
+  border: 0.125em solid #ccc; 
+  border-radius: 0.9375em; 
   background-color: #f9f9f9;
 }
 
-
 footer {
-  background-color: #333;
+  background-color: #333333;
   color: aliceblue;
   padding: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
   text-align: center;
-  box-shadow: 0 0 10px black;
-  margin: 0;
-  position: relative;
-  z-index: 1;
 }
-
 
 footer a {
   margin: 0 1.25em; 
 }
 
- .media-link {
+footer .media-link {
   height: 1.5em;
   justify-content: center;
   margin-bottom: 20px;
@@ -293,16 +232,19 @@ footer #footer-btn {
   padding: 0.625em 1.25em;
   background: black;
   color: #ffffff;
-  font-family: 'Roboto Condensed', sans-serif;
-  font-size: small;
+  font-family: 'Roboto Condensed', serif;
+  font-size: 0.75em;
   font-weight: lighter;
-  border: 1px solid #4c4cff;
+  border: 0.0625em solid black;
   border-radius: 0.3125em;
   cursor: pointer;
-  box-shadow: 0 0 10px rgba(76, 76, 255, 0.5);
-  transition: background 0.3s, color 0.3s;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
 }
+
 footer #footer-btn::before {
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
@@ -310,12 +252,14 @@ footer #footer-btn::before {
   height: 100%;
   background: black;
   background-size: 150%;
-  opacity: 0.2;
+  opacity: 0.2; 
+  pointer-events: none;
 }
 
 footer #footer-btn:hover {
-  background: #292969;
-  color: pink;
+  background: linear-gradient(135deg, #292969, #131340); 
+  color: white;
+
 }
 
 
@@ -324,7 +268,7 @@ footer #footer-btn:hover {
 /* Responsiveness stuff / Media Queries*/
 
 
-/* @media (max-width: 30em) {
+@media (max-width: 30em) {
   .image {
       width: 100%;
       float: none;
@@ -334,12 +278,12 @@ footer #footer-btn:hover {
     flex-direction: column;
     height: auto;
   }
-} */
+}
 
 
 @font-face {
   font-family: 'One Piece Font';
-  src: url('./assets/fonts/onepiece.ttf') format('truetype');
+  src: url(/assets/fonts/onepiece.ttf) format('truetype');
 }
 
 /* Smooth transitions: */
@@ -359,8 +303,3 @@ footer #footer-btn:hover {
 }
 
 
-
-/* THIS EFFECT WAS TOO MINIMAL */
-/* footer #footer-btn:hover::before {
-  opacity: 0.5; 
-  background-size: 200%; /* Zoom in stars */
