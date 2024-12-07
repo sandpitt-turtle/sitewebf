@@ -1,0 +1,13 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 1em;
+  background: var(--bg);
+  color: var(--fontColor);
+  font-size: 1em;
+  font-family: "Roboto Condensed", sans-serif;
+  transition: background 0.3s ease, color 0.3s ease;
+}

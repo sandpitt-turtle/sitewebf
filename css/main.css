@@ -1,145 +1,153 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Zen+Tokyo+Zoo&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap');
-
-
+@import url("https://fonts.googleapis.com/css2?family=Zen+Tokyo+Zoo&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap");
 :root {
   --rose: pink;
   --white: white;
-  --light-bg: #f5f5f5; 
+  --light-bg: #f5f5f5;
   --black: #333333;
-  --dark-bg: #121212; 
-  --dark-accent: #1a1a1a; 
+  --dark-bg: #121212;
+  --dark-accent: #1a1a1a;
   --button-hover: #292929;
 }
 
-
-.light-theme {
-  --bg: var(--gray);
-  --fontColor: var(--black);
-  --footer-btnBg: var(--gray);
-  --footer-btnFontColor: var(--black);
-  --h1Color: var(--black);
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(1em);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
-
-.dark-theme {
-  --bg: var(--dark-bg);
-  --fontColor: var(--rose);
-  --footer-btnBg: var(--black);
-  --footer-btnFontColor: var(--rose);
-  --h1Color: var(--white);
+#f_message {
+  animation: fadeIn 0.5s ease-in-out;
 }
 
 * {
   box-sizing: border-box;
-
-
 }
 
-.image {
-  width: 15em;
-  height: auto;
-  float: right;
-  margin: 0.5em;
-  object-fit: cover;
-  transition: transform 0.3s ease;
-}
-
-
-.zoom-container:hover img {
-  transform: scale(1.2);
-}
-
-html, body {
-  margin:1em;
+html,
+body {
+  margin: 1em;
   background: var(--bg);
   color: var(--fontColor);
   font-size: 1em;
-  font-weight: lighter;
-  font-family: 'Roboto Condensed',sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
   transition: background 0.3s ease, color 0.3s ease;
 }
 
+@font-face {
+  font-family: "One Piece Font";
+  src: url("../assets/fonts/onepiece.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 h1 {
-  font-family: 'One Piece Font';
+  font-family: "One Piece Font";
   font-size: xx-large;
-
-
   color: white !important;
-  
 }
 
 h2 {
-  font-family: 'Zen Tokyo Zoo';
+  font-family: "Zen Tokyo Zoo";
   font-weight: lighter;
 }
 
-h3 {
-  font-family: 'Sawarabi Mincho', sans-serif;
-
-}
-
-
+p,
 form p {
-  font-size: small;
-  font-family:Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   line-height: 1.5;
-  margin-bottom: 1em;
-
 }
 
 .sendbutton {
-  display:flex;
+  display: flex;
   padding: 0.3em 0.6em;
   background-color: white;
-  color:black;
+  color: black;
   text-align: center;
   border-radius: 1px;
-  font-family: 'Roboto Condensed', sans-serif;
-  font-size: normal;
+  font-family: "Roboto Condensed", sans-serif;
+  cursor: pointer;
 }
 
+.sendbutton:hover {
+  background-color: var(--button-hover);
+}
+
+#footer-btn {
+  margin: 0;
+  padding: 0.625em 1.25em;
+  border: none; /* Ensures no border artifacts */
+  background: black;
+  color: white;
+  font-family: "Roboto Condensed", serif;
+  font-size: 0.75em;
+  cursor: pointer;
+  display: block;
+  box-shadow: none; /* Remove any browser-added shadow */
+}
+
+footer #footer-btn:hover {
+  background: linear-gradient(135deg, #292969, #131340);
+  box-shadow: none;
+}
+
+footer {
+  background-color: var(--footer-btnBg);
+  color: var(--footer-btnFontColor);
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+footer a {
+  margin: 0 1.25em;
+}
+
+footer .media-link {
+  height: 1.5em;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+form p {
+  font-size: small;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  margin-bottom: 1em;
+}
 
 #f_message {
-  font-family: 'Roboto Condensed';
-  font-weight: lighter;
+  font-family: "Roboto Condensed", sans-serif;
   font-size: x-large;
+  animation: fadeIn 0.5s ease-in-out;
 }
-
-#highlighted_name {
-  font-family: 'Zen Tokyo Zoo';
-  font-size: x-large;
-}
-
-
 
 header {
-
   display: flex;
   justify-content: space-between;
   position: fixed;
   top: 0;
-  left:0;
-  right:0;
+  left: 0;
+  right: 0;
   width: 100%;
   background: var(--footer-btnBg);
   align-items: center;
   z-index: 1000;
   padding: 0.5em 1em;
   box-shadow: 0 0 10px rgba(76, 76, 255, 0.5);
-
 }
-
-nav a {
-  color: pink !important;
-  text-decoration: none;
-  font-size:medium;
-  font-family: 'Roboto Condensed',sans-serif;
-  transition: color 0.3s ease, text-shadow 0.3s ease;
-
-}
-
 
 #logo {
   display: flex;
@@ -151,7 +159,7 @@ nav a {
 #logo .logo-icon {
   width: 3.5em;
   object-fit: cover;
-  transition: transform 0.3s ease; 
+  transition: transform 0.3s ease;
 }
 
 #logo:hover .logo-icon {
@@ -159,9 +167,40 @@ nav a {
 }
 
 #logo h1 {
-  font-size:xx-large;
+  font-size: xx-large;
   color: var(--h1Color);
   margin: 0;
+}
+
+nav a {
+  color: pink !important;
+  text-decoration: none;
+  font-size: medium;
+  font-family: "Roboto Condensed", sans-serif;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+main {
+  padding-top: 4em;
+  padding-bottom: 5px;
+}
+
+main > img {
+  width: 15em;
+  float: right;
+  margin: 0.5em 0 0.5em 0.5em;
+}
+
+main .quote {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: clamp(1em, 3vw, 2.5em);
+  text-shadow: 0.05em 0.05em 0.1em blanchedalmond;
+  text-align: center;
+  margin: 5em 0;
+  padding: 2em;
+  border: 0.125em solid #ccc;
+  border-radius: 0.9375em;
+  background-color: #f9f9f9;
 }
 
 nav {
@@ -177,129 +216,18 @@ nav {
   align-items: center;
 }
 
-
-
-main {
-  padding-top: 4em;
-  padding-bottom:5px;
+.dark-theme {
+  --bg: var(--dark-bg);
+  --fontColor: var(--rose);
+  --footer-btnBg: var(--black);
+  --footer-btnFontColor: var(--rose);
 }
 
-main > img {
-  width: 15em;
-  float: right;
-  margin: 0.5em 0 0.5em 0.5em;
+.light-theme {
+  --bg: var(--light-bg);
+  --fontColor: var(--black);
+  --footer-btnBg: var(--light-bg);
+  --footer-btnFontColor: var(--black);
 }
 
-main .quote {
-  font-family: 'Roboto Condensed', sans-serif;
-  font-size: clamp(1em, 3vw, 2.5em); 
-  text-shadow: 0.05em 0.05em 0.1em blanchedalmond;
-  text-align: center;
-  margin: 5em 0;
-  padding: 2em; 
-  border: 0.125em solid #ccc; 
-  border-radius: 0.9375em; 
-  background-color: #f9f9f9;
-}
-
-footer {
-  background-color: #333333;
-  color: aliceblue;
-  padding: 1em;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  text-align: center;
-}
-
-footer a {
-  margin: 0 1.25em; 
-}
-
-footer .media-link {
-  height: 1.5em;
-  justify-content: center;
-  margin-bottom: 20px;
-}
-
-footer #footer-btn {
-  padding: 0.625em 1.25em;
-  background: black;
-  color: #ffffff;
-  font-family: 'Roboto Condensed', serif;
-  font-size: 0.75em;
-  font-weight: lighter;
-  border: 0.0625em solid black;
-  border-radius: 0.3125em;
-  cursor: pointer;
-  position: relative;
-  overflow: hidden;
-  transition: all 0.3s ease;
-}
-
-footer #footer-btn::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: black;
-  background-size: 150%;
-  opacity: 0.2; 
-  pointer-events: none;
-}
-
-footer #footer-btn:hover {
-  background: linear-gradient(135deg, #292969, #131340); 
-  color: white;
-
-}
-
-
-
-
-/* Responsiveness stuff / Media Queries*/
-
-
-@media (max-width: 30em) {
-  .image {
-      width: 100%;
-      float: none;
-      margin: 1em 0;
-  }
-  nav {
-    flex-direction: column;
-    height: auto;
-  }
-}
-
-
-@font-face {
-  font-family: 'One Piece Font';
-  src: url(/assets/fonts/onepiece.ttf) format('truetype');
-}
-
-/* Smooth transitions: */
-@keyframes fadeIn {
-  from {
-    opacity:0;
-    transform: translateY(1em);
-  }
-  to {
-    opacity:1;
-    transform: transalteY(0);
-  }
-}
-
-#f_message {
-  animation: fadeIn 0.5s ease-in-out;
-}
-
-
+/*# sourceMappingURL=main.css.map */

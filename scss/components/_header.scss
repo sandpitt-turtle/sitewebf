@@ -1,0 +1,45 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background: var(--footer-btnBg);
+  align-items: center;
+  z-index: 1000;
+  padding: 0.5em 1em;
+  box-shadow: 0 0 10px rgba(76, 76, 255, 0.5);
+}
+
+#logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  padding: 0.5em;
+}
+
+#logo .logo-icon {
+  width: 3.5em;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+#logo:hover .logo-icon {
+  transform: scale(1.2);
+}
+
+#logo h1 {
+  font-size: xx-large;
+  color: var(--h1Color);
+  margin: 0;
+}
+
+nav a {
+  color: pink !important;
+  text-decoration: none;
+  font-size: medium;
+  font-family: "Roboto Condensed", sans-serif;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}

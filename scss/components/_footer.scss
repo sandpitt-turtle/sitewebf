@@ -1,0 +1,26 @@
+footer {
+  background-color: var(--footer-btnBg);
+  color: var(--footer-btnFontColor);
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+footer a {
+  margin: 0 1.25em;
+}
+
+footer .media-link {
+  height: 1.5em;
+  justify-content: center;
+  margin-bottom: 20px;
+ 
+}

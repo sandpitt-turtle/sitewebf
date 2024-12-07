@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Zen+Tokyo+Zoo&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap");
+
+@font-face {
+  font-family: "One Piece Font";
+  src: url("../assets/fonts/onepiece.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+h1 {
+  font-family: "One Piece Font";
+  font-size: xx-large;
+  color: white !important;
+}
+
+h2 {
+  font-family: "Zen Tokyo Zoo";
+  font-weight: lighter;
+}
+
+p,
+form p {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+}
