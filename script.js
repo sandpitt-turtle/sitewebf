@@ -2,19 +2,19 @@
 
 
 document.addEventListener("DOMContentLoaded", () => {
-  const sidebar = document.getElementById("leftsidebar");
+  const sidebar = document.getElementById("leftpopbar");
   const openBtn = document.getElementById("openBtn");
   const closeBtn = document.getElementById("closeBtn");
 
   // Add event listeners
   openBtn.addEventListener("click", () => {
     console.log("Open button clicked");
-    sidebar.classList.add("leftsidebar-visible");
+    sidebar.classList.add("leftpopbar-visible");
   });
 
   closeBtn.addEventListener("click", () => {
     console.log("Close button clicked");
-    sidebar.classList.remove("leftsidebar-visible");
+    sidebar.classList.remove("leftpopbar-visible");
   });
 });
 
