@@ -14,13 +14,25 @@ footer {
   text-align: center;
 }
 
-footer a {
-  margin: 0 1.25em;
+footer .media-link {
+  display: flex; /* Enables flexbox */
+  flex-direction: row; /* Aligns items horizontally */
+  align-items: center; /* Vertically centers logos */
+  justify-content: center; /* Centers links horizontally */
+  gap: 1em; /* Adds spacing between the logos */
+  margin-bottom: 20px; /* Space between logos and other footer content */
 }
 
-footer .media-link {
-  height: 1.5em;
-  justify-content: center;
-  margin-bottom: 20px;
- 
+footer .media-link a {
+  display: inline-flex; /* Ensures links wrap tightly around their content */
+  text-decoration: none; /* Removes link underlines */
+  align-items: center; /* Vertically aligns images within links */
+}
+
+footer .media-link img {
+   /* Set to a smaller size */
+  height: 1.5em; /* Maintains aspect ratio */
+  display: block; /* Removes extra inline spacing */
+  margin: 0; /* Ensures no margins around images */
+  border: none; /* Ensures no borders */
 }

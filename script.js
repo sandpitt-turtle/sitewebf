@@ -20,6 +20,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
+
+
+
 const themeToggleButton = document.getElementById("footer-btn");
 const bodyElement = document.body;
 

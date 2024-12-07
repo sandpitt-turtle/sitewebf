@@ -34,6 +34,10 @@
   animation: fadeIn 0.5s ease-in-out;
 }
 
+.zoom-container:hover img {
+  transform: scale(1.2);
+}
+
 * {
   box-sizing: border-box;
 }
@@ -59,6 +63,7 @@ h1 {
   font-family: "One Piece Font";
   font-size: xx-large;
   color: white !important;
+  font-weight: lighter;
 }
 
 h2 {
@@ -100,16 +105,22 @@ form p {
 }
 
 #openBtn {
-  font-size: 1.5em;
+  font-size: 1em;
   background-color: transparent;
-  color: white;
-  border: none;
+  color: grey;
+  border: 1px solid rgba(255, 255, 255, 0.6); /* Subtle border */
+  border-radius: 6px;
   cursor: pointer;
-  padding: 0.5em;
+  padding: 0.5em 0.5em; /* Consistent padding */
+  transition: all 0.2s ease; /* Smooth hover transition */
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /*depth*/
 }
 
 #openBtn:hover {
-  color: #f1c40f;
+  background-color: rgba(255, 255, 255, 0.1); /* Change background on hover */
+  border-color: rgba(255, 255, 255, 0.9); /* Brighten border on hover */
+  color: white; /* Maintain text color */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
 }
 
 .sendbutton {
@@ -128,16 +139,15 @@ form p {
 }
 
 #footer-btn {
-  margin: 0;
-  padding: 0.625em 1.25em;
-  border: none; /* Ensures no border artifacts */
-  background: black;
-  color: white;
-  font-family: "Roboto Condensed", serif;
-  font-size: 0.75em;
+  font-size: 0.5em;
+  background-color: transparent;
+  color: grey;
+  border: 1px solid rgba(255, 255, 255, 0.6); /* Subtle border */
+  border-radius: 6px;
   cursor: pointer;
-  display: block;
-  box-shadow: none; /* Remove any browser-added shadow */
+  padding: 0.5em 0.5em; /* Consistent padding */
+  transition: all 0.2s ease; /* Smooth hover transition */
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /*depth*/
 }
 
 footer #footer-btn:hover {
@@ -148,7 +158,7 @@ footer #footer-btn:hover {
 #leftsidebar {
   position: fixed;
   top: 0;
-  left: -250px; /* Sidebar hidden by default */
+  left: -250px;
   width: 15em;
   height: 100%;
   background-color: #333;
@@ -159,7 +169,7 @@ footer #footer-btn:hover {
 }
 
 .leftsidebar-visible {
-  left: 0 !important; /* Sidebar slides into view */
+  left: 0 !important;
 }
 
 ul {
@@ -174,9 +184,6 @@ ul li {
 ul li a {
   color: white;
   text-decoration: none;
-}
-ul li a:hover {
-  color: #f1c40f;
 }
 
 footer {
@@ -195,14 +202,27 @@ footer {
   text-align: center;
 }
 
-footer a {
-  margin: 0 1.25em;
+footer .media-link {
+  display: flex; /* Enables flexbox */
+  flex-direction: row; /* Aligns items horizontally */
+  align-items: center; /* Vertically centers logos */
+  justify-content: center; /* Centers links horizontally */
+  gap: 1em; /* Adds spacing between the logos */
+  margin-bottom: 20px; /* Space between logos and other footer content */
 }
 
-footer .media-link {
-  height: 1.5em;
-  justify-content: center;
-  margin-bottom: 20px;
+footer .media-link a {
+  display: inline-flex; /* Ensures links wrap tightly around their content */
+  text-decoration: none; /* Removes link underlines */
+  align-items: center; /* Vertically aligns images within links */
+}
+
+footer .media-link img {
+  /* Set to a smaller size */
+  height: 1.5em; /* Maintains aspect ratio */
+  display: block; /* Removes extra inline spacing */
+  margin: 0; /* Ensures no margins around images */
+  border: none; /* Ensures no borders */
 }
 
 form p {
@@ -230,6 +250,7 @@ header {
   align-items: center;
   z-index: 1000;
   padding: 0.5em 1em;
+  box-shadow: 0 1px 2px blanchedalmond;
 }
 
 #logo {
@@ -252,8 +273,8 @@ header {
 }
 
 main {
-  padding-top: 2% m;
-  padding-bottom: 5px;
+  padding-left: 2em;
+  padding-right: 2em;
 }
 
 main > img {
