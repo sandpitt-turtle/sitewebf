@@ -11,6 +11,26 @@
   --button-hover: #292929;
 }
 
+.light-theme {
+  --bg: var(--gray);
+  --fontColor: var(--black);
+  --footer-btnBg: var(--gray);
+  --footer-btnFontColor: var(--black);
+  --h1Color: var(--black);
+}
+
+.dark-theme {
+  --bg: var(--dark-bg);
+  --fontColor: var(--rose);
+  --footer-btnBg: var(--black);
+  --footer-btnFontColor: var(--rose);
+  --h1Color: var(--white);
+}
+
+* {
+  box-sizing: border-box;
+}
+
 .image {
   width: 15em;
   height: auto;
@@ -20,22 +40,8 @@
   transition: transform 0.3s ease;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(1em);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-#f_message {
-  animation: fadeIn 0.5s ease-in-out;
-}
-
-* {
-  box-sizing: border-box;
+.zoom-container:hover img {
+  transform: scale(1.2);
 }
 
 html,
@@ -44,16 +50,11 @@ body {
   background: var(--bg);
   color: var(--fontColor);
   font-size: 1em;
+  font-weight: lighter;
   font-family: "Roboto Condensed", sans-serif;
   transition: background 0.3s ease, color 0.3s ease;
 }
 
-@font-face {
-  font-family: "One Piece Font";
-  src: url("../assets/fonts/onepiece.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
 h1 {
   font-family: "One Piece Font";
   font-size: xx-large;
@@ -67,24 +68,13 @@ h2 {
 
 h3 {
   font-family: "Sawarabi Mincho", sans-serif;
-  font-weight: lighter;
-  font-size: smaller;
-}
-
-p {
-  font-family: "Roboto Condensed", sans-serif;
-  font-weight: normal;
 }
 
 form p {
+  font-size: small;
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.5;
-}
-
-.quote {
-  font-family: "Roboto Condensed", sans-serif;
-  font-weight: lighter;
-  color: black;
+  margin-bottom: 1em;
 }
 
 .sendbutton {
@@ -95,68 +85,18 @@ form p {
   text-align: center;
   border-radius: 1px;
   font-family: "Roboto Condensed", sans-serif;
-  cursor: pointer;
-}
-
-.sendbutton:hover {
-  background-color: var(--button-hover);
-}
-
-#footer-btn {
-  margin: 0;
-  padding: 0.625em 1.25em;
-  border: none; /* Ensures no border artifacts */
-  background: black;
-  color: white;
-  font-family: "Roboto Condensed", serif;
-  font-size: 0.75em;
-  cursor: pointer;
-  display: block;
-  box-shadow: none; /* Remove any browser-added shadow */
-}
-
-footer #footer-btn:hover {
-  background: linear-gradient(135deg, #292969, #131340);
-  box-shadow: none;
-}
-
-footer {
-  background-color: var(--footer-btnBg);
-  color: var(--footer-btnFontColor);
-  padding: 1em;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  text-align: center;
-}
-
-footer a {
-  margin: 0 1.25em;
-}
-
-footer .media-link {
-  height: 1.5em;
-  justify-content: center;
-  margin-bottom: 20px;
-}
-
-form p {
-  font-size: small;
-  font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.5;
-  margin-bottom: 1em;
+  font-size: normal;
 }
 
 #f_message {
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: "Roboto Condensed";
+  font-weight: lighter;
   font-size: x-large;
-  animation: fadeIn 0.5s ease-in-out;
+}
+
+#highlighted_name {
+  font-family: "Zen Tokyo Zoo";
+  font-size: x-large;
 }
 
 header {
@@ -172,6 +112,14 @@ header {
   z-index: 1000;
   padding: 0.5em 1em;
   box-shadow: 0 0 10px rgba(76, 76, 255, 0.5);
+}
+
+nav a {
+  color: pink !important;
+  text-decoration: none;
+  font-size: medium;
+  font-family: "Roboto Condensed", sans-serif;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
 #logo {
@@ -197,12 +145,17 @@ header {
   margin: 0;
 }
 
-nav a {
-  color: pink !important;
-  text-decoration: none;
-  font-size: medium;
-  font-family: "Roboto Condensed", sans-serif;
-  transition: color 0.3s ease, text-shadow 0.3s ease;
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #333333;
+  height: 4em;
+  padding: 0.5em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 main {
@@ -228,31 +181,61 @@ main .quote {
   background-color: #f9f9f9;
 }
 
-nav {
+footer {
+  background-color: #333333;
+  color: aliceblue;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   position: fixed;
-  top: 0;
   left: 0;
   right: 0;
-  background-color: #333333;
-  height: 4em;
-  padding: 0.5em;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
 }
 
-.dark-theme {
-  --bg: var(--dark-bg);
-  --fontColor: var(--white);
-  --footer-btnBg: var(--black);
-  --footer-btnFontColor: var(--rose);
+footer a {
+  margin: 0 1.25em;
 }
 
-.light-theme {
-  --bg: var(--light-bg);
-  --fontColor: var(--black);
-  --footer-btnBg: var(--light-bg);
-  --footer-btnFontColor: var(--black);
+footer .media-link {
+  height: 1.5em;
+  justify-content: center;
+  margin-bottom: 20px;
 }
 
-/*# sourceMappingURL=main.css.map */
+/* Responsiveness stuff / Media Queries*/
+@media (max-width: 30em) {
+  .image {
+    width: 100%;
+    float: none;
+    margin: 1em 0;
+  }
+  nav {
+    flex-direction: column;
+    height: auto;
+  }
+}
+@font-face {
+  font-family: "One Piece Font";
+  src: url(/assets/fonts/onepiece.ttf) format("truetype");
+}
+/* Smooth transitions: */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(1em);
+  }
+  to {
+    opacity: 1;
+    transform: transalteY(0);
+  }
+}
+#f_message {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/*# sourceMappingURL=styles.css.map */

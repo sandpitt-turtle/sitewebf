@@ -20,8 +20,26 @@ h2 {
   font-weight: lighter;
 }
 
-p,
+h3 {
+  font-family: 'Sawarabi Mincho', sans-serif;
+  font-weight: lighter;
+  font-size: smaller;
+
+}
+
+p {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight:normal;
+
+}
+
 form p {
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.5;
+}
+
+.quote {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: lighter;
+  color:black;
 }
