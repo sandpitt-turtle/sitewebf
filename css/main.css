@@ -9,6 +9,7 @@
   --dark-bg: #121212;
   --dark-accent: #1a1a1a;
   --button-hover: #292929;
+  --sidebar-width: 15em;
 }
 
 .image {
@@ -40,17 +41,17 @@
 
 * {
   box-sizing: border-box;
-}
-
-html,
-body {
   margin: 0;
   padding: 0;
+}
+
+body {
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack header, content, and footer */
+  height: 100vh;
   background: var(--bg);
   color: var(--fontColor);
-  font-size: 1em;
   font-family: "Roboto Condensed", sans-serif;
-  transition: background 0.3s ease, color 0.3s ease;
 }
 
 @font-face {
@@ -105,22 +106,25 @@ form p {
 }
 
 #openBtn {
-  font-size: 1em;
+  position: fixed;
+  top: 1em;
+  left: 1em;
+  font-size: 1.5em;
   background-color: transparent;
   color: grey;
-  border: 1px solid rgba(255, 255, 255, 0.6); /* Subtle border */
+  border: 1px solid rgba(255, 255, 255, 0.6);
   border-radius: 6px;
   cursor: pointer;
-  padding: 0.5em 0.5em; /* Consistent padding */
-  transition: all 0.2s ease; /* Smooth hover transition */
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /*depth*/
+  padding: 0.5em;
+  transition: all 0.2s ease;
+  z-index: 1100;
 }
 
 #openBtn:hover {
-  background-color: rgba(255, 255, 255, 0.1); /* Change background on hover */
-  border-color: rgba(255, 255, 255, 0.9); /* Brighten border on hover */
-  color: white; /* Maintain text color */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.9);
+  color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .sendbutton {
@@ -155,17 +159,64 @@ footer #footer-btn:hover {
   box-shadow: none;
 }
 
+.sidebar {
+  position: fixed;
+  top: 4em; /* Start below the header */
+  left: 0;
+  width: var(--sidebar-width);
+  height: calc(100% - 4em); /* Sidebar should fill height below header */
+  background-color: #121212;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar ul li {
+  padding: 15px 20px;
+  border-bottom: 1px solid #444;
+}
+
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.sidebar-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.media-link {
+  width: 2em;
+  height: 2em;
+  display: block;
+}
+
 #leftpopbar {
   position: fixed;
-  top: 0;
-  left: -250px;
-  width: 15em;
-  height: 100%;
+  top: 4em; /* Start below the header */
+  left: -100%; /* Initially off-screen */
+  width: var(--sidebar-width);
+  height: calc(100% - 4em); /* Fill the remaining height */
   background-color: #333;
-  color: pink;
-  transition: left 0.3s ease;
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
-  z-index: 1000;
+  color: var(--rose);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: left 0.2s ease; /* Smooth transition when sliding in */
+  z-index: 1001; /* Ensure the pop-up is above other elements */
 }
 
 .leftpopbar-visible {
@@ -273,8 +324,13 @@ header {
 }
 
 main {
-  padding-left: 2em;
-  padding-right: 2em;
+  flex: 1; /* Occupy remaining space */
+  margin-top: 4em; /* Offset header height */
+  margin-left: var(--sidebar-width); /* Push content to the right for the sidebar */
+  padding: 2em;
+  background: var(--light-bg);
+  color: var(--fontColor);
+  transition: margin-left 0.3s ease; /* Smooth transition for shifting content */
 }
 
 main > img {
@@ -296,17 +352,17 @@ main .quote {
 }
 
 nav {
-  display: flex;
+  display: grid;
   align-items: center;
-  background-color: #333; /* Navigation background color */
+  background-color: #333;
   padding: 0.5em 1em;
   height: 4em;
 }
 
 .nav-container {
-  display: flex;
+  display: grid;
   align-items: center;
-  gap: 1em; /* Spacing between the button and the logo */
+  gap: 1em;
 }
 
 .dark-theme {
@@ -321,6 +377,15 @@ nav {
   --fontColor: var(--black);
   --footer-btnBg: var(--light-bg);
   --footer-btnFontColor: var(--black);
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    display: none; /* Hide sidebar */
+  }
+  main {
+    margin-left: 0; /* Reset the margin when sidebar is hidden */
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,7 +1,7 @@
 nav {
   display: grid;
   align-items: center;
-  background-color: #333; /* Navigation background color */
+  background-color: #333;
   padding: 0.5em 1em;
   height: 4em;
 }
@@ -9,7 +9,5 @@ nav {
 .nav-container {
   display: grid;
   align-items: center;
-  gap: 1em; /* Spacing between the button and the logo */
+  gap: 1em;
 }
-
-

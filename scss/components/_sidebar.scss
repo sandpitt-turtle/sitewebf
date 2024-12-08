@@ -1,0 +1,43 @@
+.sidebar {
+  position: fixed;
+  top: 4em; /* Start below the header */
+  left: 0;
+  width: var(--sidebar-width);
+  height: calc(100% - 4em); /* Sidebar should fill height below header */
+  background-color: #121212;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar ul li {
+  padding: 15px 20px;
+  border-bottom: 1px solid #444;
+}
+
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.sidebar-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.media-link {
+  width: 2em;
+  height: 2em;
+  display: block;
+}
