@@ -1,12 +1,15 @@
 main {
   flex: 1; /* Occupy remaining space */
   margin-top: 4em; /* Offset header height */
-  margin-left: var(--sidebar-width); /* Push content to the right for the sidebar */
+  margin-left: var(
+    --sidebar-width
+  ); /* Push content to the right for the sidebar */
   padding: 2em;
   background: var(--light-bg);
   color: var(--fontColor);
   transition: margin-left 0.3s ease; /* Smooth transition for shifting content */
 }
+
 main > img {
   width: 15em;
   float: right;

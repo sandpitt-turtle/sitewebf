@@ -9,20 +9,18 @@
   font-size: 24px;
   cursor: pointer;
 }
-
 #openBtn {
-  position: fixed;
-  top: 1em;
-  left: 1em;
+  position: relative; /* Ensure it's relative to its container (header) */
+  margin: 0;
   font-size: 1.5em;
-  background-color: transparent;
-  color: grey;
+  padding: 0.5em;
   border: 1px solid rgba(255, 255, 255, 0.6);
+  background: none;
+  color: white;
   border-radius: 6px;
   cursor: pointer;
-  padding: 0.5em;
-  transition: all 0.2s ease;
-  z-index: 1100;
+  transition: all 0.3s ease;
+  z-index: 1001; /* Ensure it's above other elements */
 }
 
 #openBtn:hover {

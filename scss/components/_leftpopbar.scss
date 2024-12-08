@@ -2,7 +2,7 @@
   position: fixed;
   top: 4em; /* Start below the header */
   left: -100%; /* Initially off-screen */
-  width: var(--sidebar-width);
+  width: 15em;
   height: calc(100% - 4em); /* Fill the remaining height */
   background-color: #333;
   color: var(--rose);
