@@ -1,8 +1,8 @@
 @media (max-width: 768px) {
   .sidebar {
-    display: none; /* Hide the sidebar on smaller screens */
+    display: none; 
   }
   main {
-    margin-left: 0; /* Reset margin when the sidebar is hidden */
+    margin-left: 0;
   }
 }

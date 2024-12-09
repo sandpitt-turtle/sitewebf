@@ -1,19 +1,16 @@
 main {
-  flex: 1; /* Occupy remaining space */
-  margin-top: 4em; /* Offset header height */
-  margin-left: var(
-    --sidebar-width
-  ); /* Push content to the right for the sidebar */
-  padding: 2em;
-  background: var(--light-bg);
-  color: var(--fontColor);
-  transition: margin-left 0.3s ease; /* Smooth transition for shifting content */
+  margin-top: 4em; 
+  margin-left: 15em; 
+  padding: 1em;
+  background-color: var(--bg); 
+  color: #333;
+  box-sizing: border-box; 
 }
 
-main > img {
-  width: 15em;
+main .image {
   float: right;
-  margin: 0.5em 0 0.5em 0.5em;
+  margin: 0 0 1em 1em; 
+  width: 15em; 
 }
 
 main .quote {

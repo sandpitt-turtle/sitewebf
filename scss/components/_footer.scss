@@ -1,39 +1,31 @@
 footer {
-  background-color: var(--footer-btnBg);
-  color: var(--footer-btnFontColor);
-  padding: 1em;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  left: 0;
-  right: 0;
+  position: fixed; 
   bottom: 0;
-  width: 100%;
-  text-align: center;
-  z-index:1000;
+  left: 0;
+  width: 100%; 
+  background-color: #333; 
+  color: white; 
+  text-align: center; 
+  padding: 1em 0; 
+  box-sizing: border-box;
+  z-index: 999; 
 }
 
 footer .media-link {
-  display: flex; /* Enables flexbox */
-  flex-direction: row; /* Aligns items horizontally */
-  align-items: center; /* Vertically centers logos */
-  justify-content: center; /* Centers links horizontally */
-  gap: 1em; /* Adds spacing between the logos */
-  margin-bottom: 20px; /* Space between logos and other footer content */
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  gap: 1em; 
+  margin: 0 auto; 
 }
 
 footer .media-link a {
-  display: inline-flex; /* Ensures links wrap tightly around their content */
-  text-decoration: none; /* Removes link underlines */
-  align-items: center; /* Vertically aligns images within links */
+  display: inline-flex; 
+  text-decoration: none; 
+  align-items: center; 
 }
 
 footer .media-link img {
-   /* Set to a smaller size */
-  height: 1.5em; /* Maintains aspect ratio */
-  display: block; /* Removes extra inline spacing */
-  margin: 0; /* Ensures no margins around images */
-  border: none; /* Ensures no borders */
+  width: 1.5em; 
+  height: 1.5em;
 }

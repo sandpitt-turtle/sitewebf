@@ -1,43 +1,39 @@
-/* Sidebar adjustments */
 .sidebar {
   position: fixed;
-  top: 4em; /* Aligns with the bottom of the header */
+  top: 4em;
   left: 0;
-  width: var(--sidebar-width);
-  height: calc(100% - 4em); /* Fills the space below the header */
-  background-color: var(--dark-bg);
-  color: var(--white);
-  padding-top: 1em; /* Adds space inside the sidebar */
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start; /* Align items to the left */
+  width: 15em;
+  height: calc(100% - 4em);
+  background-color: var(--bg);
+  overflow-y: auto;
+  padding: 0;
+  box-sizing: border-box;
+  box-shadow: 3px 0 6px rgba(0, 0, 0, 0.2); /* Sidebar shadow */
   z-index: 999;
-  overflow-y: auto; /* Enable scrolling for long content */
 }
 
-
 .sidebar ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
+  list-style: none; 
+  padding: 0; 
+  margin: 0; 
 }
 
 .sidebar ul li {
-  padding: 15px 20px;
-  border-bottom: 1px solid #444;
+  padding: 1em;
+  border: none !important; /* Ensures no lines appear between items */
 }
 
 .sidebar ul li a {
-  color: white;
-  text-decoration: none;
+  text-decoration: none; 
+  color: var(--fontColor); 
+  display: block; 
 }
 
 .sidebar-item {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start; /* Aligns items vertically at the top */
-  align-items: flex-start; /* Aligns items horizontally to the left */
-}
+  display: block; 
+  padding: 0; 
+  margin: 0;
+} /* Missing closing brace added here */
 
 .media-link {
   width: 2em;

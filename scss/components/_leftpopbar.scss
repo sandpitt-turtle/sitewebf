@@ -1,22 +1,21 @@
 #leftpopbar {
   position: fixed;
-  top: 4em; /* Start below the header */
-  left: -100%; /* Initially off-screen */
-  width: 15em;
-  height: calc(100% - 4em); /* Fill the remaining height */
+  top: 4em; 
+  left: -100%; 
+  width: 15em; 
+  height: calc(100% - 4em); 
   background-color: #333;
-  color: var(--rose);
+  color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  transition: left 0.2s ease; /* Smooth transition when sliding in */
-  z-index: 1001; /* Ensure the pop-up is above other elements */
+  transition: left 0.3s ease; 
+  z-index: 1001;
 }
 
-
 .leftpopbar-visible {
-  left: 0 !important;
+  left: 0 !important; 
 }
 
 ul {

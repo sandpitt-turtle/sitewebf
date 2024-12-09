@@ -6,20 +6,9 @@
 
 
 
-// html,
-// body {
-//   margin: 0;
-//   padding: 0;
-//   background: var(--bg);
-//   color: var(--fontColor);
-//   font-size: 1em;
-//   font-family: "Roboto Condensed", sans-serif;
-//   transition: background 0.3s ease, color 0.3s ease;
-// }
-
 body {
-  display: flex; /* Use flexbox for layout */
-  flex-direction: column; /* Stack header, content, and footer */
+  display: flex; 
+  flex-direction: column; 
   height: 100vh;
   background: var(--bg);
   color: var(--fontColor);

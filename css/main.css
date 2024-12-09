@@ -46,8 +46,8 @@
 }
 
 body {
-  display: flex; /* Use flexbox for layout */
-  flex-direction: column; /* Stack header, content, and footer */
+  display: flex;
+  flex-direction: column;
   height: 100vh;
   background: var(--bg);
   color: var(--fontColor);
@@ -106,17 +106,13 @@ form p {
 }
 
 #openBtn {
-  position: relative; /* Ensure it's relative to its container (header) */
   margin: 0;
-  font-size: 1.5em;
   padding: 0.5em;
-  border: 1px solid rgba(255, 255, 255, 0.6);
+  font-size: 1.5em;
   background: none;
+  border: none;
   color: white;
-  border-radius: 6px;
   cursor: pointer;
-  transition: all 0.3s ease;
-  z-index: 1001; /* Ensure it's above other elements */
 }
 
 #openBtn:hover {
@@ -142,15 +138,12 @@ form p {
 }
 
 #footer-btn {
-  font-size: 0.5em;
-  background-color: transparent;
-  color: grey;
-  border: 1px solid rgba(255, 255, 255, 0.6); /* Subtle border */
-  border-radius: 6px;
+  margin-top: 1em;
+  background: none;
+  border: 1px solid white;
+  color: white;
+  padding: 0.5em 1em;
   cursor: pointer;
-  padding: 0.5em 0.5em; /* Consistent padding */
-  transition: all 0.2s ease; /* Smooth hover transition */
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /*depth*/
 }
 
 footer #footer-btn:hover {
@@ -158,46 +151,42 @@ footer #footer-btn:hover {
   box-shadow: none;
 }
 
-/* Sidebar adjustments */
 .sidebar {
   position: fixed;
-  top: 4em; /* Aligns with the bottom of the header */
+  top: 4em;
   left: 0;
-  width: var(--sidebar-width);
-  height: calc(100% - 4em); /* Fills the space below the header */
-  background-color: var(--dark-bg);
-  color: var(--white);
-  padding-top: 1em; /* Adds space inside the sidebar */
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start; /* Align items to the left */
+  width: 15em;
+  height: calc(100% - 4em);
+  background-color: var(--bg);
+  overflow-y: auto;
+  padding: 0;
+  box-sizing: border-box;
+  box-shadow: 3px 0 6px rgba(0, 0, 0, 0.2); /* Sidebar shadow */
   z-index: 999;
-  overflow-y: auto; /* Enable scrolling for long content */
 }
 
 .sidebar ul {
-  list-style-type: none;
+  list-style: none;
   padding: 0;
   margin: 0;
 }
 
 .sidebar ul li {
-  padding: 15px 20px;
-  border-bottom: 1px solid #444;
+  padding: 1em;
+  border: none !important; /* Ensures no lines appear between items */
 }
 
 .sidebar ul li a {
-  color: white;
   text-decoration: none;
+  color: var(--fontColor);
+  display: block;
 }
 
 .sidebar-item {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start; /* Aligns items vertically at the top */
-  align-items: flex-start; /* Aligns items horizontally to the left */
-}
-
+  display: block;
+  padding: 0;
+  margin: 0;
+} /* Missing closing brace added here */
 .media-link {
   width: 2em;
   height: 2em;
@@ -206,18 +195,18 @@ footer #footer-btn:hover {
 
 #leftpopbar {
   position: fixed;
-  top: 4em; /* Start below the header */
-  left: -100%; /* Initially off-screen */
+  top: 4em;
+  left: -100%;
   width: 15em;
-  height: calc(100% - 4em); /* Fill the remaining height */
+  height: calc(100% - 4em);
   background-color: #333;
-  color: var(--rose);
+  color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  transition: left 0.2s ease; /* Smooth transition when sliding in */
-  z-index: 1001; /* Ensure the pop-up is above other elements */
+  transition: left 0.3s ease;
+  z-index: 1001;
 }
 
 .leftpopbar-visible {
@@ -239,43 +228,35 @@ ul li a {
 }
 
 footer {
-  background-color: var(--footer-btnBg);
-  color: var(--footer-btnFontColor);
-  padding: 1em;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   position: fixed;
-  left: 0;
-  right: 0;
   bottom: 0;
+  left: 0;
   width: 100%;
+  background-color: #333;
+  color: white;
   text-align: center;
-  z-index: 1000;
+  padding: 1em 0;
+  box-sizing: border-box;
+  z-index: 999;
 }
 
 footer .media-link {
-  display: flex; /* Enables flexbox */
-  flex-direction: row; /* Aligns items horizontally */
-  align-items: center; /* Vertically centers logos */
-  justify-content: center; /* Centers links horizontally */
-  gap: 1em; /* Adds spacing between the logos */
-  margin-bottom: 20px; /* Space between logos and other footer content */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  margin: 0 auto;
 }
 
 footer .media-link a {
-  display: inline-flex; /* Ensures links wrap tightly around their content */
-  text-decoration: none; /* Removes link underlines */
-  align-items: center; /* Vertically aligns images within links */
+  display: inline-flex;
+  text-decoration: none;
+  align-items: center;
 }
 
 footer .media-link img {
-  /* Set to a smaller size */
-  height: 1.5em; /* Maintains aspect ratio */
-  display: block; /* Removes extra inline spacing */
-  margin: 0; /* Ensures no margins around images */
-  border: none; /* Ensures no borders */
+  width: 1.5em;
+  height: 1.5em;
 }
 
 form p {
@@ -292,25 +273,25 @@ form p {
 }
 
 header {
-  display: flex; /* Flexbox ensures elements align in a row */
-  align-items: center; /* Vertically centers items */
-  justify-content: space-between; /* Places space between left and right sections */
   position: fixed;
   top: 0;
   left: 0;
-  right: 0;
-  height: 4em; /* Consistent height */
-  background-color: var(--dark-bg); /* Unified background color */
-  color: var(--white);
-  padding: 0.5em 1em;
+  width: 100%;
+  height: 4em;
+  background-color: #333;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+  box-sizing: border-box;
   z-index: 1000;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Depth effect */
 }
 
 #logo {
-  display: flex; /* Aligns the logo section horizontally */
+  display: flex;
   align-items: center;
-  gap: 0.5em; /* Spacing between logo icon and title */
+  gap: 0.5em;
 }
 
 .logo-icon {
@@ -318,33 +299,32 @@ header {
   width: auto;
 }
 
-#logo img.logo-icon {
+#logo img {
   width: 2em;
   height: 2em;
   object-fit: cover;
 }
 
 #logo h1 {
-  font-size: 1.5em;
-  color: white;
   margin: 0;
+  font-size: 1.5em;
   font-family: "One Piece Font", sans-serif;
+  color: white;
 }
 
 main {
-  flex: 1; /* Occupy remaining space */
-  margin-top: 4em; /* Offset header height */
-  margin-left: var(--sidebar-width); /* Push content to the right for the sidebar */
-  padding: 2em;
-  background: var(--light-bg);
-  color: var(--fontColor);
-  transition: margin-left 0.3s ease; /* Smooth transition for shifting content */
+  margin-top: 4em;
+  margin-left: 15em;
+  padding: 1em;
+  background-color: var(--bg);
+  color: #333;
+  box-sizing: border-box;
 }
 
-main > img {
-  width: 15em;
+main .image {
   float: right;
-  margin: 0.5em 0 0.5em 0.5em;
+  margin: 0 0 1em 1em;
+  width: 15em;
 }
 
 main .quote {
@@ -360,11 +340,23 @@ main .quote {
 }
 
 nav {
-  display: grid;
-  align-items: center;
-  background-color: #333;
-  padding: 0.5em 1em;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   height: 4em;
+  background-color: #333;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  z-index: 1000;
+  border: none;
+  overflow: hidden;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); /* Header shadow */
 }
 
 .nav-container {
@@ -392,10 +384,10 @@ nav {
 
 @media (max-width: 768px) {
   .sidebar {
-    display: none; /* Hide the sidebar on smaller screens */
+    display: none;
   }
   main {
-    margin-left: 0; /* Reset margin when the sidebar is hidden */
+    margin-left: 0;
   }
 }
 
