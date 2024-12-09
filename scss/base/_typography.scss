@@ -19,19 +19,27 @@ h1 {
 h2 {
   font-family: "Zen Tokyo Zoo";
   font-weight: lighter;
+  color: var(--fontColor);
 }
 
 h3 {
-  font-family: 'Sawarabi Mincho', sans-serif;
+  font-family: "Sawarabi Mincho", sans-serif;
   font-weight: lighter;
+  color: var(--fontColor);
   font-size: smaller;
+}
 
+a {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: x-small;
 }
 
 p {
-  font-family: 'Roboto Condensed', sans-serif;
-  font-weight:normal;
-
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 100;
+  color: var(--fontColor);
+  padding-top: 1em;
+  padding-bottom: 1em;
 }
 
 form p {
@@ -40,7 +48,7 @@ form p {
 }
 
 .quote {
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
   font-weight: lighter;
-  color:black;
+  color: black;
 }

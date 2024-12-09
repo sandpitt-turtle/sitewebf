@@ -1,6 +1,5 @@
 "use strict"; // demo said to
 
-
 document.addEventListener("DOMContentLoaded", () => {
   const sidebar = document.getElementById("leftpopbar");
   const openBtn = document.getElementById("openBtn");
@@ -18,11 +17,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-
-
-
-
-
 const themeToggleButton = document.getElementById("footer-btn");
 const bodyElement = document.body;
 
@@ -32,13 +26,13 @@ const toggleTheme = () => {
     //to light theme
     bodyElement.classList.remove("dark-theme");
     bodyElement.classList.add("light-theme");
-    themeToggleButton.textContent = "Switch to Dark Theme";
+    themeToggleButton.textContent = "Dark Theme";
     localStorage.setItem("theme", "light-theme");
   } else {
     //to dark theme
     bodyElement.classList.remove("light-theme");
     bodyElement.classList.add("dark-theme");
-    themeToggleButton.textContent = "Switch to Light Theme";
+    themeToggleButton.textContent = "Light Theme";
     localStorage.setItem("theme", "dark-theme");
   }
 };
@@ -50,11 +44,9 @@ const applySavedTheme = () => {
     bodyElement.classList.remove("light-theme", "dark-theme");
     bodyElement.classList.add(savedTheme);
     themeToggleButton.textContent =
-      savedTheme === "dark-theme"
-        ? "Switch to Light Theme"
-        : "Switch to Dark Theme";
+      savedTheme === "dark-theme" ? "Light Theme" : "Dark Theme";
   }
-}
+};
 
 // event listener for theme toggle button
 themeToggleButton.addEventListener("click", toggleTheme);

@@ -9,19 +9,19 @@
   cursor: pointer;
 }
 #openBtn {
-  margin: 0; 
-  padding: 0.5em; 
-  font-size: 1.5em; 
+  margin: 0;
+  padding: 0.5em;
+  font-size: 1.5em;
   background: none;
   border: none;
-  color: white;
+  color: grey;
   cursor: pointer;
 }
 #openBtn:hover {
   background-color: rgba(255, 255, 255, 0.1);
-  border-color: rgba(255, 255, 255, 0.9);
+  border-color: black;
   color: white;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px px rgba(0, 0, 0, 0.2);
 }
 
 .sendbutton {
@@ -40,17 +40,17 @@
 }
 
 #footer-btn {
-  margin-top: 1em; 
-  background: none; 
-  border: 1px solid white; 
-  color: white; 
+  margin-top: 1em;
+  background: none;
+  border-radius: 10%;
+  border: 1px solid grey;
+  color: grey;
+  font-size: xx-small;
   padding: 0.5em 1em;
   cursor: pointer;
 }
 
-
-
 footer #footer-btn:hover {
-  background: linear-gradient(135deg, #292969, #131340);
+  background: black;
   box-shadow: none;
 }

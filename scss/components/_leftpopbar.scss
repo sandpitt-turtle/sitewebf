@@ -1,21 +1,21 @@
 #leftpopbar {
   position: fixed;
-  top: 4em; 
-  left: -100%; 
-  width: 15em; 
-  height: calc(100% - 4em); 
+  top: 4em;
+  left: -100%;
+  width: 15em;
+  height: calc(100% - 4em);
   background-color: #333;
   color: white;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  transition: left 0.3s ease; 
+  justify-content: top;
+  align-items: top;
+  transition: left 0.3s ease;
   z-index: 1001;
 }
 
 .leftpopbar-visible {
-  left: 0 !important; 
+  left: 0 !important;
 }
 
 ul {
@@ -24,14 +24,12 @@ ul {
   margin: 0;
 
   li {
-    padding: 15px 20px;
+    padding: 10px 10px;
     border-bottom: 1px solid #444;
 
     a {
       color: white;
       text-decoration: none;
-  
     }
   }
 }
-
