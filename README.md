@@ -1,6 +1,7 @@
 # SiteWebF 🌐  
 
 Welcome to the **long-term experimental sandbox** *(or sandpit, if you will)*.
+<br> Current work is taking place on aux1 branch.
 
 ---
 
@@ -13,7 +14,6 @@ You can check out a simpler version of the site here:  <br></br>
 
 ## 📝 Notes  
 
-Current edits are predominately on 'aux1' branch. 
 
 
 > These experiments are **very exploratory** and may evolve over time.  
