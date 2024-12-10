@@ -13,6 +13,8 @@ You can check out a simpler version of the site here:  <br></br>
 
 ## 📝 Notes  
 
+Current edits are predominately on 'aux1' branch. 
+
 
 > These experiments are **very exploratory** and may evolve over time.  
 
