@@ -5,7 +5,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const openBtn = document.getElementById("openBtn");
   const closeBtn = document.getElementById("closeBtn");
 
-  // Add event listeners
   openBtn.addEventListener("click", () => {
     console.log("Open button clicked");
     sidebar.classList.add("leftpopbar-visible");
@@ -37,7 +36,7 @@ const toggleTheme = () => {
   }
 };
 
-// Apply saved theme
+// for applying the saved theme
 const applySavedTheme = () => {
   const savedTheme = localStorage.getItem("theme");
   if (savedTheme) {
@@ -59,12 +58,12 @@ const fmessage = document.getElementById("f_message");
 
 // form
 form.addEventListener("submit", function (event) {
-  event.preventDefault(); // no page refresh
-
+  event.preventDefault(); // no page refresh, cuz that is apparently the default behavior !? 
+  
   const name = document.getElementById("name_text").value; //takes input from form
   fmessage.innerHTML = `We have received your message, 
     <span id="highlighted_name">${name}</span>`;
 
   form.style.display = "none"; // hides the form
-  contactMessage.style.display = "block"; // Loads success message with transition/animation
+  contactMessage.style.display = "block"; // Loads success message over it with transition/animation
 });
