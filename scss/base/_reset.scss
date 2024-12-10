@@ -8,8 +8,9 @@
 
 body {
   display: flex; 
-  flex-direction: column; 
+  flex-direction: row; 
   height: 100vh;
+  margin:0;
   background: var(--bg);
   color: var(--fontColor);
   font-family: "Roboto Condensed", sans-serif;

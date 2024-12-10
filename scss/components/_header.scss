@@ -20,14 +20,17 @@ header {
   gap: 0.5em; 
   
 }
+
+
+
 .logo-icon {
-  height: 2em;
+  height: 4em;
   width: auto;
 }
 
 #logo img {
-  width: 2em; 
-  height: 2em;
+  width: 4em; 
+  height: auto;
   object-fit: cover;
 }
 
@@ -37,3 +40,4 @@ header {
   font-family: "One Piece Font", sans-serif; 
   color: white;
 }
+

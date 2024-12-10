@@ -47,8 +47,9 @@
 
 body {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   height: 100vh;
+  margin: 0;
   background: var(--bg);
   color: var(--fontColor);
   font-family: "Roboto Condensed", sans-serif;
@@ -164,11 +165,9 @@ footer #footer-btn:hover {
 }
 
 .sidebar {
-  position: fixed;
-  top: 4em;
-  left: 0;
+  flex: 0 0 var(--b);
   width: 15em;
-  height: calc(100% - 4em);
+  height: 100%;
   background-color: var(--bg);
   overflow-y: auto;
   padding: 0;
@@ -200,10 +199,8 @@ footer #footer-btn:hover {
   margin: 0;
 }
 
-.media-link {
-  width: 2em;
-  height: 2em;
-  display: block;
+#home {
+  font-size: small;
 }
 
 #leftpopbar {
@@ -213,6 +210,7 @@ footer #footer-btn:hover {
   width: 15em;
   height: calc(100% - 4em);
   background-color: #333;
+  color: white;
   display: flex;
   flex-direction: column;
   justify-content: top;
@@ -267,8 +265,12 @@ footer .media-link a {
 }
 
 footer .media-link img {
-  width: 1.5em;
-  height: 1.5em;
+  width: 2em;
+  height: 2em;
+}
+
+.media-link {
+  display: block;
 }
 
 form p {
@@ -307,13 +309,13 @@ header {
 }
 
 .logo-icon {
-  height: 2em;
+  height: 4em;
   width: auto;
 }
 
 #logo img {
-  width: 2em;
-  height: 2em;
+  width: 4em;
+  height: auto;
   object-fit: cover;
 }
 
@@ -325,6 +327,7 @@ header {
 }
 
 main {
+  flex: 1;
   margin-top: 4em;
   margin-left: 0;
   padding: 2em;

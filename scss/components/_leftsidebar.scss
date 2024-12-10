@@ -1,9 +1,7 @@
 .sidebar {
-  position: fixed;
-  top: 4em;
-  left: 0;
+  flex: 0 0 var(--b);
   width: 15em;
-  height: calc(100% - 4em);
+  height: 100%;
   background-color: var(--bg);
   overflow-y: auto;
   padding: 0;
@@ -35,8 +33,6 @@
   margin: 0;
 }
 
-.media-link {
-  width: 2em;
-  height: 2em;
-  display: block;
+#home {
+  font-size: small;
 }
