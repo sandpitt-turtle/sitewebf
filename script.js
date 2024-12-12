@@ -1,6 +1,6 @@
 "use strict"; // demo said to
 
-
+//POPUP BAR
 document.addEventListener("DOMContentLoaded", () => {
   const sidebar = document.getElementById("leftpopbar");
   const openBtn = document.getElementById("openBtn");
@@ -18,10 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-
-
-
-
+//THEME CONTROL
 
 const themeToggleButton = document.getElementById("footer-btn");
 const bodyElement = document.body;
@@ -33,19 +30,18 @@ const toggleTheme = () => {
     bodyElement.classList.remove("dark-theme");
     bodyElement.classList.add("light-theme");
     themeToggleButton.textContent = "Switch to Dark Theme";
-    localStorage.setItem("theme", "light-theme");
+    localStorage.setItem("theme", "light-theme"); // saving to storage
   } else {
     //to dark theme
     bodyElement.classList.remove("light-theme");
     bodyElement.classList.add("dark-theme");
     themeToggleButton.textContent = "Switch to Light Theme";
-    localStorage.setItem("theme", "dark-theme");
+    localStorage.setItem("theme", "dark-theme"); //saving to storage
   }
 };
-
 // Apply saved theme
 const applySavedTheme = () => {
-  const savedTheme = localStorage.getItem("theme");
+  const savedTheme = localStorage.getItem("theme"); //fetches 'item'/theme saved in storage
   if (savedTheme) {
     bodyElement.classList.remove("light-theme", "dark-theme");
     bodyElement.classList.add(savedTheme);
@@ -54,7 +50,7 @@ const applySavedTheme = () => {
         ? "Switch to Light Theme"
         : "Switch to Dark Theme";
   }
-}
+};
 
 // event listener for theme toggle button
 themeToggleButton.addEventListener("click", toggleTheme);
