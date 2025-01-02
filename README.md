@@ -16,6 +16,6 @@ You can check out a simpler version of the site here:  <br></br>
 
 
 
-> These experiments are **very exploratory** and may evolve over time.  
+> This will evolve over time.  
 
 ---
