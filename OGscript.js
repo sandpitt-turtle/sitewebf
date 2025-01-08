@@ -1,7 +1,7 @@
 "use strict"; // demo said to
 
 document.addEventListener("DOMContentLoaded", () => {
-  const sidebar = document.getElementById("leftpopbar");
+  const sidebar = document.getElementById("leftpopbar")
   const openBtn = document.getElementById("openBtn");
   const closeBtn = document.getElementById("closeBtn");
 
