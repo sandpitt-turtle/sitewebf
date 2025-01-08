@@ -14,8 +14,10 @@ You can check out a simpler version of the site here:  <br></br>
 
 ## 📝 Notes  
 
+**Recently began working on TypeScript**
 
+The project currently contains **a LOT of notes**, especially within the CSS and JavaScript files.  
 
-> This will evolve over time.  
+> These experiments are **very exploratory** and may evolve over time.  
 
 ---
