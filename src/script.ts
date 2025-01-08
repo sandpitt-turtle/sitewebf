@@ -60,8 +60,10 @@ const applySavedTheme = (): void => {
 };
 
 // event listener for theme toggle button
+if (themeToggleButton) {
 themeToggleButton.addEventListener("click", toggleTheme);
 applySavedTheme();
+}
 
 // CONTACT FORM
 const form = document.getElementById("contact_form") as HTMLFormElement | null;
