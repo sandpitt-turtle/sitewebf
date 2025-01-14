@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
     "closeBtn"
   ) as HTMLButtonElement | null;
 
-  // Add event listeners
+
   if (sidebar && openBtn && closeBtn) {
     openBtn.addEventListener("click", () => {
       console.log("Open button clicked");
